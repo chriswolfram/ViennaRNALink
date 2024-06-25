@@ -20,7 +20,7 @@ jobs:
 
       - name: Run a one-line script
         run: |
-          gunzip ViennaRNA-2.6.4.tar.gz
+          unzip ViennaRNA-2.6.4.zip
 
       - name: Run a multi-line script
         run: ls
