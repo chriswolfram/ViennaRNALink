@@ -18,9 +18,10 @@ jobs:
           repository: ViennaRNA/ViennaRNA
           tag: v2.6.4
 
-      - name: Run a one-line script
-        run: |
-          unzip ViennaRNA-2.6.4.zip
+      - name: Unpack ViennaRNA release
+        run: unzip ViennaRNA-2.6.4.zip
 
-      - name: Run a multi-line script
-        run: ls
+      - name: Run configure
+        run: |
+          cd ViennaRNA-2.6.4
+          pwd
