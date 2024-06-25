@@ -8,43 +8,43 @@ on:
   workflow_dispatch:
 
 jobs:
-  # build-linux:
-  #   runs-on: ubuntu-latest
+  build-linux:
+    runs-on: ubuntu-latest
     
-  #   steps:
-  #     - uses: robinraju/release-downloader@v1.10
-  #       with:
-  #         repository: ViennaRNA/ViennaRNA
-  #         tag: v2.6.4
+    steps:
+      - uses: robinraju/release-downloader@v1.10
+        with:
+          repository: ViennaRNA/ViennaRNA
+          tag: v2.6.4
 
-  #     - name: Unpack ViennaRNA release
-  #       run: unzip -q ViennaRNA-2.6.4.zip
+      - name: Unpack ViennaRNA release
+        run: unzip -q ViennaRNA-2.6.4.zip
 
-  #     - name: Run configure
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         ./configure --prefix=/home/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+      - name: Run configure
+        run: |
+          cd ViennaRNA-2.6.4
+          ./configure --prefix=/home/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
 
-  #     - name: Run make
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         make
+      - name: Run make
+        run: |
+          cd ViennaRNA-2.6.4
+          make
 
-  #     - name: Run make install
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         make install
+      - name: Run make install
+        run: |
+          cd ViennaRNA-2.6.4
+          make install
 
-  #     - name: Build wrapper library
-  #       run: |
-  #         cd build/lib
-  #         echo "void dummy() {}" >> dummy.c
-  #         clang++ dummy.c --shared -Wl,--whole-archive,libRNA.a -o libRNA.so
+      - name: Build wrapper library
+        run: |
+          cd build/lib
+          echo "void dummy() {}" >> dummy.c
+          clang++ dummy.c --shared -Wl,--whole-archive,libRNA.a -o libRNA.so
 
-  #     - uses: actions/upload-artifact@v4
-  #       with:
-  #         name: linux-library
-  #         path: build/libRNA.so
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-library
+          path: build/libRNA.so
   
   build-macos:
     runs-on: macos-latest
@@ -58,31 +58,31 @@ jobs:
       - name: Test
         run: pwd
 
-      # - name: Unpack ViennaRNA release
-      #   run: unzip -q ViennaRNA-2.6.4.zip
+      - name: Unpack ViennaRNA release
+        run: unzip -q ViennaRNA-2.6.4.zip
 
-      # - name: Run configure
-      #   run: |
-      #     cd ViennaRNA-2.6.4
-      #     ./configure --prefix=/home/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+      - name: Run configure
+        run: |
+          cd ViennaRNA-2.6.4
+          ./configure --prefix=/Users/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
 
-      # - name: Run make
-      #   run: |
-      #     cd ViennaRNA-2.6.4
-      #     make
+      - name: Run make
+        run: |
+          cd ViennaRNA-2.6.4
+          make
 
-      # - name: Run make install
-      #   run: |
-      #     cd ViennaRNA-2.6.4
-      #     make install
+      - name: Run make install
+        run: |
+          cd ViennaRNA-2.6.4
+          make install
 
-      # - name: Build wrapper library
-      #   run: |
-      #     cd build/lib
-      #     echo "void dummy() {}" >> dummy.c
-      #     clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.so
+      - name: Build wrapper library
+        run: |
+          cd build/lib
+          echo "void dummy() {}" >> dummy.c
+          clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.so
 
-      # - uses: actions/upload-artifact@v4
-      #   with:
-      #     name: macos-library
-      #     path: build/libRNA.so
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-library
+          path: build/libRNA.so
