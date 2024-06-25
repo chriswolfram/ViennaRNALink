@@ -8,18 +8,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-linux:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Download ViennaRNA release
-        uses: robinraju/release-downloader@v1.10
+      - uses: robinraju/release-downloader@v1.10
         with:
           repository: ViennaRNA/ViennaRNA
           tag: v2.6.4
 
       - name: Unpack ViennaRNA release
-        run: unzip ViennaRNA-2.6.4.zip
+        run: unzip -q ViennaRNA-2.6.4.zip
 
       - name: Run configure
         run: |
@@ -41,3 +40,8 @@ jobs:
           cd build
           echo "void dummy() {}" >> dummy.c
           clang++ dummy.c --shared -Wl,--whole-archive,libRNA.a -o libRNA.so
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-library
+          path: build/libRNA.so
