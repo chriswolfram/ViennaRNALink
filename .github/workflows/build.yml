@@ -39,7 +39,7 @@ jobs:
         run: |
           cd build/lib
           echo "void dummy() {}" >> dummy.c
-          clang++ dummy.c --shared -Wl,-whole-archive,libRNA.a -o libRNA.so
+          clang++ dummy.c --shared -Wl,--whole-archive,libRNA.a -Wl,--no-whole-archive -o libRNA.so
 
       - uses: actions/upload-artifact@v4
         with:
