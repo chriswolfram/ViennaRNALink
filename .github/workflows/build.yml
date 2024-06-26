@@ -111,16 +111,16 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           ls
-          C:\cygwin\bin\bash ./configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+          C:\cygwin\bin\bash ./configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --disable-pthreads
 
       - name: Run make
         shell: cmd
         run: |
           cd ViennaRNA-2.6.4
-          make
+          C:\cygwin\bin\bash make
 
       - name: Run make install
         shell: cmd
         run: |
           cd ViennaRNA-2.6.4
-          make install
+          C:\cygwin\bin\bash make install
