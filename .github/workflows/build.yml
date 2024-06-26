@@ -93,6 +93,9 @@ jobs:
     steps:
       - name: Install Cygwin Action
         uses: cygwin/cygwin-install-action@v4
+
+      # Suggested with the Cygwin action for getting windows-compatible linebreaks from git.
+      - run: git config --global core.autocrlf input
             
       - uses: robinraju/release-downloader@v1.10
         with:
@@ -108,7 +111,7 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           ls
-          .\configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+          ./configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
 
       - name: Run make
         shell: cmd
