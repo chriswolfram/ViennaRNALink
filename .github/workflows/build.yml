@@ -94,6 +94,8 @@ jobs:
       - name: Download installer
         run: wget https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
 
+      - run: ls
+
   # build-windows:
   #   runs-on: windows-latest
     
