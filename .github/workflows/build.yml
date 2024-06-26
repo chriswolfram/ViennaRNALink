@@ -104,7 +104,7 @@ jobs:
 
       - name: Unpack ViennaRNA release
         shell: cmd
-        run: unzip -q ViennaRNA-2.6.4.zip
+        run: C:\cygwin\bin\bash unzip -q ViennaRNA-2.6.4.zip
 
       - name: Run configure
         shell: cmd
