@@ -93,7 +93,7 @@ jobs:
     steps:
       - name: Download installer
         shell: bash
-        run: curl https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
+        run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
 
       - run: ls
 
