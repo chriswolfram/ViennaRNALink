@@ -111,7 +111,7 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           ls
-          ./configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+          C:\cygwin\bin\bash unzip -q ./configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
 
       - name: Run make
         shell: cmd
