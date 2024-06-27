@@ -91,14 +91,20 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Download installer
-        shell: bash
-        run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
+      - run: conda create -n viennarna-env
 
-      - name: Run installer
-        run: .\Install-ViennaRNA-2.6.2_64bit.exe
+  # build-windows:
+  #   runs-on: windows-latest
 
-      - run: ls
+  #   steps:
+  #     - name: Download installer
+  #       shell: bash
+  #       run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
+
+  #     - name: Run installer
+  #       run: .\Install-ViennaRNA-2.6.2_64bit.exe
+
+  #     - run: ls
 
   # build-windows:
   #   runs-on: windows-latest
