@@ -100,60 +100,63 @@ jobs:
   #     - shell: bash
   #       run: C:\tools\anaconda3\conda create -n viennarna-env
 
-  build-windows:
-    runs-on: windows-latest
-
-    steps:
-      - name: Download installer
-        shell: bash
-        run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
-
-      - name: Run installer
-        run: .\Install-ViennaRNA-2.6.2_64bit.exe
-
-      - run: ls
-
-      - run: RNAfold --version
-
-      - run: $Env:Path
-
-      - shell: bash
-        run: ls "C:\Program Files\"
-
   # build-windows:
   #   runs-on: windows-latest
-    
+
   #   steps:
-  #     - name: Install Cygwin Action
-  #       uses: cygwin/cygwin-install-action@v4
+  #     - name: Download installer
+  #       shell: bash
+  #       run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
 
-  #     # Suggested with the Cygwin action for getting windows-compatible linebreaks from git.
-  #     - run: git config --global core.autocrlf input
+  #     - name: Run installer
+  #       run: .\Install-ViennaRNA-2.6.2_64bit.exe
+
+  #     - run: ls
+
+  #     - run: RNAfold --version
+
+  #     - run: $Env:Path
+
+  #     - shell: bash
+  #       run: ls "C:\Program Files\"
+
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Install MinGW
+        uses: egor-tensin/setup-mingw@v2.2.0
             
-  #     - uses: robinraju/release-downloader@v1.10
-  #       with:
-  #         repository: ViennaRNA/ViennaRNA
-  #         tag: v2.6.4
+      # Suggested with the Cygwin action for getting windows-compatible linebreaks from git.
+      - run: git config --global core.autocrlf input
 
-  #     - name: Unpack ViennaRNA release
-  #       shell: cmd
-  #       run: unzip -q ViennaRNA-2.6.4.zip
+      - uses: robinraju/release-downloader@v1.10
+        with:
+          repository: ViennaRNA/ViennaRNA
+          tag: v2.6.4
 
-  #     - name: Run configure
-  #       shell: cmd
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         ls
-  #         C:\cygwin\bin\bash ./configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --disable-pthreads
+      - name: Unpack ViennaRNA release
+        shell: cmd
+        run: unzip -q ViennaRNA-2.6.4.zip
 
-  #     - name: Run make
-  #       shell: cmd
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         C:\cygwin\bin\bash make
+      - name: Run configure
+        shell: cmd
+        run: |
+          $env:PATH = "C:\msys64\usr\bin;$env:PATH"
+          cd ViennaRNA-2.6.4
+          ls
+          .\configure --prefix=D:\a\ViennaRNALink\ViennaRNALink\build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --disable-pthreads
 
-  #     - name: Run make install
-  #       shell: cmd
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         C:\cygwin\bin\bash make install
+      - name: Run make
+        shell: cmd
+        run: |
+          $env:PATH = "C:\msys64\usr\bin;$env:PATH"
+          cd ViennaRNA-2.6.4
+          make
+
+      - name: Run make install
+        shell: cmd
+        run: |
+          $env:PATH = "C:\msys64\usr\bin;$env:PATH"
+          cd ViennaRNA-2.6.4
+          make install
