@@ -98,26 +98,34 @@ jobs:
       
     steps:
       
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+
+    - run: ls
     
     - name: Download macOS builds
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: macos-library
         path: ViennaRNA/LibraryResources/MacOSX-ARM64/
+
+    - run: ls
         
     - name: Download Linux builds
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: linux-library
         path: ViennaRNA/LibraryResources/Linux-x86-64/
-        
+
+    - run: ls
+    
     - name: Upload final paclet
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ViennaRNA
         path: ViennaRNA/
         if-no-files-found: error
+
+    - run: ls
 
 
   # Below is a graveyard of attempts to get Windows builds working.
