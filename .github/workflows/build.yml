@@ -87,31 +87,36 @@ jobs:
   #         name: macos-library
   #         path: build/lib/libRNA.dylib
 
-  build-windows:
-    runs-on: windows-latest
-
-    steps:
-      - shell: bash
-        run: choco install anaconda3
-        
-      - shell: bash
-        run: ls C:\tools\anaconda3
-
-      - shell: bash
-        run: C:\tools\anaconda3\conda create -n viennarna-env
-
   # build-windows:
   #   runs-on: windows-latest
 
   #   steps:
-  #     - name: Download installer
-  #       shell: bash
-  #       run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
+  #     - shell: bash
+  #       run: choco install anaconda3
+        
+  #     - shell: bash
+  #       run: ls C:\tools\anaconda3
 
-  #     - name: Run installer
-  #       run: .\Install-ViennaRNA-2.6.2_64bit.exe
+  #     - shell: bash
+  #       run: C:\tools\anaconda3\conda create -n viennarna-env
 
-  #     - run: ls
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Download installer
+        shell: bash
+        run: curl --output Install-ViennaRNA-2.6.2_64bit.exe https://www.tbi.univie.ac.at/RNA/download/win/windows/Install-ViennaRNA-2.6.2_64bit.exe
+
+      - name: Run installer
+        run: .\Install-ViennaRNA-2.6.2_64bit.exe
+
+      - run: ls
+
+      - run: $Env:Path
+
+      - shell: bash
+        run: echo $Path
 
   # build-windows:
   #   runs-on: windows-latest
