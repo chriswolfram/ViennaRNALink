@@ -113,6 +113,8 @@ jobs:
 
       - run: ls
 
+      - run: RNAfold --version
+
       - run: $Env:Path
 
       - shell: bash
