@@ -95,7 +95,10 @@ jobs:
         run: choco install anaconda3
         
       - shell: bash
-        run: conda create -n viennarna-env
+        run: ls C:\tools\anaconda3
+
+      - shell: bash
+        run: C:\tools\anaconda3\conda create -n viennarna-env
 
   # build-windows:
   #   runs-on: windows-latest
