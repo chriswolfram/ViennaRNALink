@@ -92,8 +92,8 @@ jobs:
 
     steps:
       - shell: bash
-        run: start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
-
+        run: choco install anaconda3
+        
       - shell: bash
         run: conda create -n viennarna-env
 
