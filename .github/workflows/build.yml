@@ -95,7 +95,7 @@ jobs:
         run: start /wait "" Miniconda3-latest-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\Miniconda3
 
       - shell: bash
-        run: run: conda create -n viennarna-env
+        run: conda create -n viennarna-env
 
   # build-windows:
   #   runs-on: windows-latest
