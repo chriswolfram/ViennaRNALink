@@ -115,7 +115,7 @@ jobs:
 
       - run: $Env:Path
 
-      - run: ls C:\Program Files\
+      - run: ls "C:\Program Files\"
 
   # build-windows:
   #   runs-on: windows-latest
