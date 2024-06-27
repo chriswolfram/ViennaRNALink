@@ -91,7 +91,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - run: conda create -n viennarna-env
+      - shell: bash
+        run: conda create -n viennarna-env
 
   # build-windows:
   #   runs-on: windows-latest
