@@ -102,6 +102,7 @@ jobs:
         path: ViennaRNALink
         sparse-checkout: |
           Kernel
+          Documentation
           PacletInfo.wl
           ResourceDefinition.nb
     
