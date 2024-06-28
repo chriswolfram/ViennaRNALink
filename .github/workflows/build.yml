@@ -80,6 +80,13 @@ jobs:
           echo "void dummy() {}" >> dummy.c
           clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.dylib
 
+      - uses: lando/code-sign-action@v2
+        with:
+          file: build/lib/libRNA.dylib
+          certificate-data: ${{ secrets.APPLE_CERT_DATA }}
+          certificate-password: ${{ secrets.APPLE_CERT_PASSWORD }}
+          apple-team-id: ${{ secrets.APPLE_TEAM_ID }}
+
       - uses: actions/upload-artifact@v4
         with:
           name: macos-library
