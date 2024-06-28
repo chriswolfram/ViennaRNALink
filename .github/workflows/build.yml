@@ -86,55 +86,12 @@ jobs:
           path: build/lib/libRNA.dylib
 
 
-  # Unclear if this is needed or whether the ARM version also works on older Intel macs.
-  build-macos-x86:
-    runs-on: macos-13
-    
-    steps:
-      - uses: robinraju/release-downloader@v1.10
-        with:
-          repository: ViennaRNA/ViennaRNA
-          tag: v2.6.4
-
-      - run: brew install mpfr
-
-      - name: Unpack ViennaRNA release
-        run: unzip -q ViennaRNA-2.6.4.zip
-
-      - name: Run configure
-        run: |
-          cd ViennaRNA-2.6.4
-          ./configure --prefix=/Users/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
-
-      - name: Run make
-        run: |
-          cd ViennaRNA-2.6.4
-          make
-
-      - name: Run make install
-        run: |
-          cd ViennaRNA-2.6.4
-          make install
-
-      - name: Build wrapper library
-        run: |
-          cd build/lib
-          echo "void dummy() {}" >> dummy.c
-          clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.dylib
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: macos-x86-library
-          path: build/lib/libRNA.dylib
-
-
   final-assembly:
     name: Final paclet assembly
     
     needs:
     - build-linux
     - build-macos
-    - build-macos-x86
     
     runs-on: ubuntu-latest
       
@@ -153,12 +110,6 @@ jobs:
       with:
         name: macos-library
         path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
-
-    - name: Download macOS x86 builds
-      uses: actions/download-artifact@v4
-      with:
-        name: macos-x86-library
-        path: ViennaRNALink/LibraryResources/MacOSX-x86-64/
         
     - name: Download Linux builds
       uses: actions/download-artifact@v4
@@ -173,6 +124,47 @@ jobs:
         path: ViennaRNALink/
         if-no-files-found: error
 
+
+  # Unclear if this is needed or whether the ARM version also works on older Intel macs.
+  # build-macos-x86:
+  #   runs-on: macos-13
+    
+  #   steps:
+  #     - uses: robinraju/release-downloader@v1.10
+  #       with:
+  #         repository: ViennaRNA/ViennaRNA
+  #         tag: v2.6.4
+
+  #     - run: brew install mpfr
+
+  #     - name: Unpack ViennaRNA release
+  #       run: unzip -q ViennaRNA-2.6.4.zip
+
+  #     - name: Run configure
+  #       run: |
+  #         cd ViennaRNA-2.6.4
+  #         ./configure --prefix=/Users/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+
+  #     - name: Run make
+  #       run: |
+  #         cd ViennaRNA-2.6.4
+  #         make
+
+  #     - name: Run make install
+  #       run: |
+  #         cd ViennaRNA-2.6.4
+  #         make install
+
+  #     - name: Build wrapper library
+  #       run: |
+  #         cd build/lib
+  #         echo "void dummy() {}" >> dummy.c
+  #         clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.dylib
+
+  #     - uses: actions/upload-artifact@v4
+  #       with:
+  #         name: macos-x86-library
+  #         path: build/lib/libRNA.dylib
 
   # Below is a graveyard of attempts to get Windows builds working.
 
