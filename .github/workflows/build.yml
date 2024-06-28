@@ -56,9 +56,6 @@ jobs:
           repository: ViennaRNA/ViennaRNA
           tag: v2.6.4
 
-      - name: Test
-        run: pwd
-
       - name: Unpack ViennaRNA release
         run: unzip -q ViennaRNA-2.6.4.zip
 
@@ -99,8 +96,7 @@ jobs:
           repository: ViennaRNA/ViennaRNA
           tag: v2.6.4
 
-      - name: Test
-        run: pwd
+      - run: brew install mpfr
 
       - name: Unpack ViennaRNA release
         run: unzip -q ViennaRNA-2.6.4.zip
