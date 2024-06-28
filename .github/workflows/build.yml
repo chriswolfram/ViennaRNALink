@@ -110,6 +110,13 @@ jobs:
       with:
         name: macos-library
         path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
+
+    # Unclear if this version of the library can actually work on x86 macs
+    - name: Download macOS x86 builds
+      uses: actions/download-artifact@v4
+      with:
+        name: macos-library
+        path: ViennaRNALink/LibraryResources/MacOSX-x86-64/
         
     - name: Download Linux builds
       uses: actions/download-artifact@v4
