@@ -80,8 +80,7 @@ jobs:
           echo "void dummy() {}" >> dummy.c
           clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.dylib
 
-      - name: Sign binary
-        uses: lando/code-sign-action@v2
+      - uses: lando/code-sign-action@v2
         with:
           file: build/lib/libRNA.dylib
           certificate-data: ${{ secrets.APPLE_CERT_DATA }}
