@@ -3,9 +3,7 @@ BeginPackage["ChristopherWolfram`ViennaRNALink`RNAFold`"];
 Begin["`Private`"];
 
 Needs["ChristopherWolfram`ViennaRNALink`"]
-Needs["ChristopherWolfram`ViennaRNALink`General`"]
 Needs["ChristopherWolfram`ViennaRNALink`Utilities`"]
-
 
 
 vrnaFoldC := vrnaFoldC =
@@ -13,7 +11,7 @@ vrnaFoldC := vrnaFoldC =
 
 vrnaFold[seqStr_] :=
 	Module[{structure, mfe, structureString},
-		structure = RawPointer[ViennaRNAAllocate[StringLength[seqStr] + 1], "UnsignedInteger8"];
+		structure = RawMemoryAllocate["UnsignedInteger8", StringLength[seqStr] + 1];
 		mfe = vrnaFoldC[seqStr, structure];
 		structureString = RawMemoryImport[structure, "String"];
 		<|
