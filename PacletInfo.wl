@@ -1,19 +1,25 @@
+(* ::Package:: *)
+
 PacletObject[
   <|
     "Name" -> "ChristopherWolfram/ViennaRNALink",
-    "Description" -> "One-line description of the paclet",
+    "Description" -> "Connecting ViennaRNA to the Wolfram Language for RNA folding",
     "Creator" -> "Christopher Wolfram",
+    "License" -> "MIT",
+    "PublisherID" -> "ChristopherWolfram",
     "Version" -> "1.0.0",
     "WolframVersion" -> "14+",
-    "PublisherID" -> "ChristopherWolfram",
-    "License" -> "MIT",
     "PrimaryContext" -> "ChristopherWolfram`ViennaRNALink`",
     "DocumentationURL" -> "https://resources.wolframcloud.com/PacletRepository/resources",
     "Extensions" -> {
       {
         "Kernel",
         "Root" -> "Kernel",
-        "Context" -> {"ChristopherWolfram`ViennaRNALink`"}
+        "Context" -> {"ChristopherWolfram`ViennaRNALink`"},
+        "Symbols" -> {
+          "ChristopherWolfram`ViennaRNALink`$LibViennaRNA",
+          "ChristopherWolfram`ViennaRNALink`RNAFold"
+        }
       },
       {
         "Documentation",
@@ -21,6 +27,7 @@ PacletObject[
         "Language" -> "English"
       },
       {"LibraryResources"}
-    }
+    },
+    "SystemID" -> {"Linux", "Linux-x86-64", "MacOSX-ARM64", "MacOSX-x86-64"}
   |>
 ]

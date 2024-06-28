@@ -28,11 +28,11 @@ getFoldProperty[seqStr_, fold_, "StructureString"] := fold["StructureString"]
 getFoldProperty[seqStr_, fold_, "BioSequence"] := BioSequence["RNA", seqStr, fold["StructureString"]]
 getFoldProperty[seqStr_, fold_, other_] := Missing["KeyAbsent", other]
 
+getFoldProperty[seqStr_, fold_, l_List] :=
+	AssociationMap[getFoldProperty[seqStr, fold, #]&, l]
+
 getFoldProperty[seqStr_, fold_, All] :=
-	AssociationMap[
-		getFoldProperty[seqStr, fold, #]&,
-		{"MinimumFreeEnergy", "StructureString", "BioSequence"}
-	]
+	getFoldProperty[seqStr, fold, {"MinimumFreeEnergy", "StructureString", "BioSequence"}]
 
 
 DeclareFunction[RNAFold, iRNAFold, {1,2}];
