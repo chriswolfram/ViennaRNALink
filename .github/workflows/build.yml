@@ -97,28 +97,25 @@ jobs:
     runs-on: ubuntu-latest
       
     steps:
-      
     - uses: actions/checkout@v4
       with:
         path: ViennaRNALink
-
-    - run: ls
+        sparse-checkout: |
+          Kernel
+          PacletInfo.wl
+          ResourceDefinition.nb
     
     - name: Download macOS builds
       uses: actions/download-artifact@v4
       with:
         name: macos-library
         path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
-
-    - run: ls
         
     - name: Download Linux builds
       uses: actions/download-artifact@v4
       with:
         name: linux-library
         path: ViennaRNALink/LibraryResources/Linux-x86-64/
-
-    - run: ls
     
     - name: Upload final paclet
       uses: actions/upload-artifact@v4
@@ -126,9 +123,6 @@ jobs:
         name: ViennaRNALink
         path: ViennaRNALink/
         if-no-files-found: error
-
-    - run: ls
-
 
   # Below is a graveyard of attempts to get Windows builds working.
 
