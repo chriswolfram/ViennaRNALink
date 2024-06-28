@@ -99,6 +99,8 @@ jobs:
     steps:
       
     - uses: actions/checkout@v4
+      with:
+        path: ViennaRNALink
 
     - run: ls
     
@@ -106,7 +108,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: macos-library
-        path: ViennaRNA/LibraryResources/MacOSX-ARM64/
+        path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
 
     - run: ls
         
@@ -114,15 +116,15 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: linux-library
-        path: ViennaRNA/LibraryResources/Linux-x86-64/
+        path: ViennaRNALink/LibraryResources/Linux-x86-64/
 
     - run: ls
     
     - name: Upload final paclet
       uses: actions/upload-artifact@v4
       with:
-        name: ViennaRNA
-        path: ViennaRNA/
+        name: ViennaRNALink
+        path: ViennaRNALink/
         if-no-files-found: error
 
     - run: ls
