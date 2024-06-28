@@ -1,0 +1,1533 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     75978,       1525]
+NotebookOptionsPosition[     74292,       1487]
+NotebookOutlinePosition[     74690,       1503]
+CellTagsIndexPosition[     74647,       1500]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.928501076129188*^9, 3.9285010766562634`*^9}, {
+  3.92854416624063*^9, 3.9285441667128983`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"c9c1dc2e-0cee-44e6-b36c-f4f291fb7706"],
+
+Cell[CellGroupData[{
+
+Cell["Init", "Section",
+ CellChangeTimes->{{3.928501079063541*^9, 
+  3.928501079478644*^9}},ExpressionUUID->"efb21481-4623-40aa-9217-\
+b062565b9f7f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PacletDirectoryLoad", "[", 
+   RowBox[{"ParentDirectory", "@", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.928501003830123*^9, 3.928501046018558*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"14db0846-12ae-4a8b-b53d-5e34227ed2ff"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<ChristopherWolfram`ViennaRNALink`\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.928501017751319*^9, 3.928501026127006*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"93b1d77f-80f1-4b05-8ba4-2999b9fac90c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Scratch space", "Section",
+ CellChangeTimes->{{3.928501080770002*^9, 
+  3.928501082123397*^9}},ExpressionUUID->"19b51f12-5475-450b-a06c-\
+7abaf5c2c9e4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RNAFold", "[", "\"\<GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\>\"",
+   "]"}]], "Input",
+ CellChangeTimes->{{3.928544728777934*^9, 3.928544728911769*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"99435a7e-5fa2-4a9b-8af0-4169199a1fa4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["BioSequence",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              CapForm["Round"], 
+              GrayLevel[0.35], 
+              Thickness[0.05], 
+              LineBox[
+               
+               NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                 Rational[3, 32] Pi, 0.3483416127053548}, {
+                 Rational[1, 8] Pi, 0.4592201188381077}, {
+                 Rational[5, 32] Pi, 0.5656760841911972}, {
+                 Rational[3, 16] Pi, 0.6666842796235226}, {
+                 Rational[7, 32] Pi, 0.7612719409963745}, {
+                 Rational[1, 4] Pi, 0.8485281374238569}, {
+                 Rational[9, 32] Pi, 0.9276125440352844}, {
+                 Rational[5, 16] Pi, 0.9977635347630542}, {
+                 Rational[11, 32] Pi, 1.058305517218026}, {
+                 Rational[3, 8] Pi, 1.1086554390135441`}, {
+                 Rational[13, 32] Pi, 1.1483284028786505`}, {
+                 Rational[7, 16] Pi, 1.1769423364838765`}, {
+                 Rational[15, 32] Pi, 1.1942216720066363`}, {
+                 Rational[1, 2] Pi, 1.2}, {
+                 Rational[17, 32] Pi, 1.1942216720066363`}, {
+                 Rational[9, 16] Pi, 1.1769423364838765`}, {
+                 Rational[19, 32] Pi, 1.1483284028786505`}, {
+                 Rational[5, 8] Pi, 1.1086554390135441`}, {
+                 Rational[21, 32] Pi, 1.058305517218026}, {
+                 Rational[11, 16] Pi, 0.9977635347630542}, {
+                 Rational[23, 32] Pi, 0.9276125440352844}, {
+                 Rational[3, 4] Pi, 0.8485281374238569}, {
+                 Rational[25, 32] Pi, 0.7612719409963745}, {
+                 Rational[13, 16] Pi, 0.6666842796235226}, {
+                 Rational[27, 32] Pi, 0.5656760841911972}, {
+                 Rational[7, 8] Pi, 0.4592201188381077}, {
+                 Rational[29, 32] Pi, 0.3483416127053548}, {
+                 Rational[15, 16] Pi, 0.2341083864193539}, {
+                 Rational[31, 32] Pi, 0.11762056839547272`}, {Pi, 0.}, {
+                 Rational[33, 32] Pi, -0.11762056839547272`}, {
+                 Rational[17, 16] Pi, -0.2341083864193539}, {
+                 Rational[35, 32] Pi, -0.3483416127053548}, {
+                 Rational[9, 8] Pi, -0.4592201188381077}, {
+                 Rational[37, 32] Pi, -0.5656760841911972}, {
+                 Rational[19, 16] Pi, -0.6666842796235226}, {
+                 Rational[39, 32] Pi, -0.7612719409963745}, {
+                 Rational[5, 4] Pi, -0.8485281374238569}, {
+                 Rational[41, 32] Pi, -0.9276125440352844}, {
+                 Rational[21, 16] Pi, -0.9977635347630542}, {
+                 Rational[43, 32] Pi, -1.058305517218026}, {
+                 Rational[11, 8] Pi, -1.1086554390135441`}, {
+                 Rational[45, 32] Pi, -1.1483284028786505`}, {
+                 Rational[23, 16] Pi, -1.1769423364838765`}, {
+                 Rational[47, 32] Pi, -1.1942216720066363`}, {
+                 Rational[3, 2] Pi, -1.2}, {
+                 Rational[49, 32] Pi, -1.1942216720066363`}, {
+                 Rational[25, 16] Pi, -1.1769423364838765`}, {
+                 Rational[51, 32] Pi, -1.1483284028786505`}, {
+                 Rational[13, 8] Pi, -1.1086554390135441`}, {
+                 Rational[53, 32] Pi, -1.058305517218026}, {
+                 Rational[27, 16] Pi, -0.9977635347630542}, {
+                 Rational[55, 32] Pi, -0.9276125440352844}, {
+                 Rational[7, 4] Pi, -0.8485281374238569}, {
+                 Rational[57, 32] Pi, -0.7612719409963745}, {
+                 Rational[29, 16] Pi, -0.6666842796235226}, {
+                 Rational[59, 32] Pi, -0.5656760841911972}, {
+                 Rational[15, 8] Pi, -0.4592201188381077}, {
+                 Rational[61, 32] Pi, -0.3483416127053548}, {
+                 Rational[31, 16] Pi, -0.2341083864193539}, {
+                 Rational[63, 32] Pi, -0.11762056839547272`}}, CompressedData["
+1:eJxTTMoPSmViYGCwA2IQLaHrEvJb8aR90a+N1c7fz9pfUjSur7l5yZ7t08x5
+Vt7X7CHyN+2dT7OcuJN81z7OIlSzKuu+fVeC+W4WqUdQ9Y/sP2wwd60KfWpf
+unz3y91/n9qfVbb7GRbzAqr/pX2fyP8qFfXX9rs3ndln5fbGvnFrfQPD+rdQ
+897bT4i+d2rt2/f2DPffnYxx/2ifxS115OK7D1DzP9l/bw+s4d370X5JSrnJ
+nOwv9v4vymb1xn+C2vfVnnne8ZqDVz7Zu736P+92/3d7LzFx/Q7pz1D7f9ob
+g8Fn+1f5HZzSW37B5SHu+QPX3/NVoCTqxl+4+RD3/YfbP2Ovz3ufOgYHmPsg
+7mV0gLk/k2HikhwBJgeY/yDuZ3KA+d/a+WpkzyJmB1j4QPzD4gALP542Sf41
+JqwOsPCF+I/VARb+907EHjl9jM0BFj8Q/7I7wOJvPfeiytcRHA7nCmesS5TZ
+B/U/pwMDFDT6PdPjfs0Jk98PCQ8umP79QRO1nmjVcsPM3w8JHx6Y/ftVruTN
+9OLnhblvPyS8eGHu3/9VbLNf1kI+mP/2Q8KPH+b//Y/X/GY8KikAC5/9kPAU
+gIXffp9zc+9ceSQAC9/9kPAVdICG//6t7+23P1kt6ACNn/2Q8BZygMbffjnB
+RxO/lAg5QON3PyT8hRyg8b+/zaglh8VOGC4PiQ9huP73wWruIuwicPMh8SMC
+tz+i9ISiygURuPsg8SUKd//BaVl/jGeKwv0HiT9RuP81d/Bcd04Sg4cPJD7F
+4OE36ea6jcHa4vDwhcSvODz8f/8K6En+Ig6PH0h8S8DjL0Xmc1rxXgl4/AIA
+jNzkWA==
+                "]]], 
+              Thickness[0.04], {
+               LineBox[
+                
+                NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                  Rational[1, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.19634954084936207`, 0.2341083864193539}, {
+                 0.19634954084936207`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[5, 16] Pi, 0.9977635347630542}, {
+                  Rational[5, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.9817477042468103, 0.9977635347630542}, {0.9817477042468103,
+                  0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[9, 16] Pi, 1.1769423364838765`}, {
+                  Rational[9, 16] Pi, Rational[1, 16] Pi}}, {{
+                 1.7671458676442586`, 1.1769423364838765`}, {
+                 1.7671458676442586`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[13, 16] Pi, 0.6666842796235226}, {
+                  Rational[13, 16] Pi, Rational[1, 16] Pi}}, {{
+                 2.552544031041707, 0.6666842796235226}, {2.552544031041707, 
+                 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[17, 16] Pi, -0.2341083864193539}, {
+                  Rational[17, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 3.3379421944391554`, -0.2341083864193539}, {
+                 3.3379421944391554`, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[21, 16] Pi, -0.9977635347630542}, {
+                  Rational[21, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.123340357836604, -0.9977635347630542}, {
+                 4.123340357836604, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[25, 16] Pi, -1.1769423364838765`}, {
+                  Rational[25, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.908738521234052, -1.1769423364838765`}, {
+                 4.908738521234052, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[29, 16] Pi, -0.6666842796235226}, {
+                  Rational[29, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 5.6941366846315, -0.6666842796235226}, {
+                 5.6941366846315, -0.19634954084936207`}}]]}, 
+              Opacity[0], 
+              RectangleBox[{0, -2.4}, 
+               
+               NCache[{Rational[63, 32] Pi, 2.4}, {6.1850105367549055`, 
+                2.4}]]}, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.25 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"RNA Sequence\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Content: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"GAGUAG\[Ellipsis]ACA\[NonBreakingSpace]\"", 
+                  "SummaryItem"], "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                  "\"(42 letters)\"", FontColor -> GrayLevel[0.5], 
+                   StripOnInput -> False], "SummaryItemAnnotation"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              CapForm["Round"], 
+              GrayLevel[0.35], 
+              Thickness[0.05], 
+              LineBox[
+               
+               NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                 Rational[3, 32] Pi, 0.3483416127053548}, {
+                 Rational[1, 8] Pi, 0.4592201188381077}, {
+                 Rational[5, 32] Pi, 0.5656760841911972}, {
+                 Rational[3, 16] Pi, 0.6666842796235226}, {
+                 Rational[7, 32] Pi, 0.7612719409963745}, {
+                 Rational[1, 4] Pi, 0.8485281374238569}, {
+                 Rational[9, 32] Pi, 0.9276125440352844}, {
+                 Rational[5, 16] Pi, 0.9977635347630542}, {
+                 Rational[11, 32] Pi, 1.058305517218026}, {
+                 Rational[3, 8] Pi, 1.1086554390135441`}, {
+                 Rational[13, 32] Pi, 1.1483284028786505`}, {
+                 Rational[7, 16] Pi, 1.1769423364838765`}, {
+                 Rational[15, 32] Pi, 1.1942216720066363`}, {
+                 Rational[1, 2] Pi, 1.2}, {
+                 Rational[17, 32] Pi, 1.1942216720066363`}, {
+                 Rational[9, 16] Pi, 1.1769423364838765`}, {
+                 Rational[19, 32] Pi, 1.1483284028786505`}, {
+                 Rational[5, 8] Pi, 1.1086554390135441`}, {
+                 Rational[21, 32] Pi, 1.058305517218026}, {
+                 Rational[11, 16] Pi, 0.9977635347630542}, {
+                 Rational[23, 32] Pi, 0.9276125440352844}, {
+                 Rational[3, 4] Pi, 0.8485281374238569}, {
+                 Rational[25, 32] Pi, 0.7612719409963745}, {
+                 Rational[13, 16] Pi, 0.6666842796235226}, {
+                 Rational[27, 32] Pi, 0.5656760841911972}, {
+                 Rational[7, 8] Pi, 0.4592201188381077}, {
+                 Rational[29, 32] Pi, 0.3483416127053548}, {
+                 Rational[15, 16] Pi, 0.2341083864193539}, {
+                 Rational[31, 32] Pi, 0.11762056839547272`}, {Pi, 0.}, {
+                 Rational[33, 32] Pi, -0.11762056839547272`}, {
+                 Rational[17, 16] Pi, -0.2341083864193539}, {
+                 Rational[35, 32] Pi, -0.3483416127053548}, {
+                 Rational[9, 8] Pi, -0.4592201188381077}, {
+                 Rational[37, 32] Pi, -0.5656760841911972}, {
+                 Rational[19, 16] Pi, -0.6666842796235226}, {
+                 Rational[39, 32] Pi, -0.7612719409963745}, {
+                 Rational[5, 4] Pi, -0.8485281374238569}, {
+                 Rational[41, 32] Pi, -0.9276125440352844}, {
+                 Rational[21, 16] Pi, -0.9977635347630542}, {
+                 Rational[43, 32] Pi, -1.058305517218026}, {
+                 Rational[11, 8] Pi, -1.1086554390135441`}, {
+                 Rational[45, 32] Pi, -1.1483284028786505`}, {
+                 Rational[23, 16] Pi, -1.1769423364838765`}, {
+                 Rational[47, 32] Pi, -1.1942216720066363`}, {
+                 Rational[3, 2] Pi, -1.2}, {
+                 Rational[49, 32] Pi, -1.1942216720066363`}, {
+                 Rational[25, 16] Pi, -1.1769423364838765`}, {
+                 Rational[51, 32] Pi, -1.1483284028786505`}, {
+                 Rational[13, 8] Pi, -1.1086554390135441`}, {
+                 Rational[53, 32] Pi, -1.058305517218026}, {
+                 Rational[27, 16] Pi, -0.9977635347630542}, {
+                 Rational[55, 32] Pi, -0.9276125440352844}, {
+                 Rational[7, 4] Pi, -0.8485281374238569}, {
+                 Rational[57, 32] Pi, -0.7612719409963745}, {
+                 Rational[29, 16] Pi, -0.6666842796235226}, {
+                 Rational[59, 32] Pi, -0.5656760841911972}, {
+                 Rational[15, 8] Pi, -0.4592201188381077}, {
+                 Rational[61, 32] Pi, -0.3483416127053548}, {
+                 Rational[31, 16] Pi, -0.2341083864193539}, {
+                 Rational[63, 32] Pi, -0.11762056839547272`}}, CompressedData["
+1:eJxTTMoPSmViYGCwA2IQLaHrEvJb8aR90a+N1c7fz9pfUjSur7l5yZ7t08x5
+Vt7X7CHyN+2dT7OcuJN81z7OIlSzKuu+fVeC+W4WqUdQ9Y/sP2wwd60KfWpf
+unz3y91/n9qfVbb7GRbzAqr/pX2fyP8qFfXX9rs3ndln5fbGvnFrfQPD+rdQ
+897bT4i+d2rt2/f2DPffnYxx/2ifxS115OK7D1DzP9l/bw+s4d370X5JSrnJ
+nOwv9v4vymb1xn+C2vfVnnne8ZqDVz7Zu736P+92/3d7LzFx/Q7pz1D7f9ob
+g8Fn+1f5HZzSW37B5SHu+QPX3/NVoCTqxl+4+RD3/YfbP2Ovz3ufOgYHmPsg
+7mV0gLk/k2HikhwBJgeY/yDuZ3KA+d/a+WpkzyJmB1j4QPzD4gALP542Sf41
+JqwOsPCF+I/VARb+907EHjl9jM0BFj8Q/7I7wOJvPfeiytcRHA7nCmesS5TZ
+B/U/pwMDFDT6PdPjfs0Jk98PCQ8umP79QRO1nmjVcsPM3w8JHx6Y/ftVruTN
+9OLnhblvPyS8eGHu3/9VbLNf1kI+mP/2Q8KPH+b//Y/X/GY8KikAC5/9kPAU
+gIXffp9zc+9ceSQAC9/9kPAVdICG//6t7+23P1kt6ACNn/2Q8BZygMbffjnB
+RxO/lAg5QON3PyT8hRyg8b+/zaglh8VOGC4PiQ9huP73wWruIuwicPMh8SMC
+tz+i9ISiygURuPsg8SUKd//BaVl/jGeKwv0HiT9RuP81d/Bcd04Sg4cPJD7F
+4OE36ea6jcHa4vDwhcSvODz8f/8K6En+Ig6PH0h8S8DjL0Xmc1rxXgl4/AIA
+jNzkWA==
+                "]]], 
+              Thickness[0.04], {
+               LineBox[
+                
+                NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                  Rational[1, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.19634954084936207`, 0.2341083864193539}, {
+                 0.19634954084936207`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[5, 16] Pi, 0.9977635347630542}, {
+                  Rational[5, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.9817477042468103, 0.9977635347630542}, {0.9817477042468103,
+                  0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[9, 16] Pi, 1.1769423364838765`}, {
+                  Rational[9, 16] Pi, Rational[1, 16] Pi}}, {{
+                 1.7671458676442586`, 1.1769423364838765`}, {
+                 1.7671458676442586`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[13, 16] Pi, 0.6666842796235226}, {
+                  Rational[13, 16] Pi, Rational[1, 16] Pi}}, {{
+                 2.552544031041707, 0.6666842796235226}, {2.552544031041707, 
+                 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[17, 16] Pi, -0.2341083864193539}, {
+                  Rational[17, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 3.3379421944391554`, -0.2341083864193539}, {
+                 3.3379421944391554`, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[21, 16] Pi, -0.9977635347630542}, {
+                  Rational[21, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.123340357836604, -0.9977635347630542}, {
+                 4.123340357836604, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[25, 16] Pi, -1.1769423364838765`}, {
+                  Rational[25, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.908738521234052, -1.1769423364838765`}, {
+                 4.908738521234052, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[29, 16] Pi, -0.6666842796235226}, {
+                  Rational[29, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 5.6941366846315, -0.6666842796235226}, {
+                 5.6941366846315, -0.19634954084936207`}}]]}, 
+              Opacity[0], 
+              RectangleBox[{0, -2.4}, 
+               
+               NCache[{Rational[63, 32] Pi, 2.4}, {6.1850105367549055`, 
+                2.4}]]}, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.25 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"RNA Sequence\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Content: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"GAGUAGUGGAACCAGGCUAU\[Ellipsis]CAGACUAACA\
+\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\"", "SummaryItem"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                  "\"(42 letters)\"", FontColor -> GrayLevel[0.5], 
+                   StripOnInput -> False], "SummaryItemAnnotation"]}]}, {
+               RowBox[{
+                 TagBox[
+                 "\"Higher-order Structure: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"12 bonds\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                 "\"Sequence composition: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"A (12), C (8), G (12), U (10)\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+    Bond[{7, 16}], 
+    Bond[{6, 17}], 
+    Bond[{5, 18}], 
+    Bond[{4, 19}], 
+    Bond[{3, 20}], 
+    Bond[{27, 31}], 
+    Bond[{26, 32}], 
+    Bond[{25, 33}], 
+    Bond[{24, 34}], 
+    Bond[{23, 35}], 
+    Bond[{22, 36}], 
+    Bond[{21, 37}]}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.9285447291699677`*^9, 3.928545006248444*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"1139dc15-7d47-418d-8f43-a53c29bd6a09"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RNAFold", "[", 
+  RowBox[{"BioSequence", "[", 
+   RowBox[{
+   "\"\<RNA\>\"", ",", "\"\<GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\>\""}],
+    "]"}], "]"}]], "Input",
+ CellLabel->"In[7]:=",ExpressionUUID->"d51fee54-a6b2-4899-96aa-12619a8a3b0a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["BioSequence",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              CapForm["Round"], 
+              GrayLevel[0.35], 
+              Thickness[0.05], 
+              LineBox[
+               
+               NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                 Rational[3, 32] Pi, 0.3483416127053548}, {
+                 Rational[1, 8] Pi, 0.4592201188381077}, {
+                 Rational[5, 32] Pi, 0.5656760841911972}, {
+                 Rational[3, 16] Pi, 0.6666842796235226}, {
+                 Rational[7, 32] Pi, 0.7612719409963745}, {
+                 Rational[1, 4] Pi, 0.8485281374238569}, {
+                 Rational[9, 32] Pi, 0.9276125440352844}, {
+                 Rational[5, 16] Pi, 0.9977635347630542}, {
+                 Rational[11, 32] Pi, 1.058305517218026}, {
+                 Rational[3, 8] Pi, 1.1086554390135441`}, {
+                 Rational[13, 32] Pi, 1.1483284028786505`}, {
+                 Rational[7, 16] Pi, 1.1769423364838765`}, {
+                 Rational[15, 32] Pi, 1.1942216720066363`}, {
+                 Rational[1, 2] Pi, 1.2}, {
+                 Rational[17, 32] Pi, 1.1942216720066363`}, {
+                 Rational[9, 16] Pi, 1.1769423364838765`}, {
+                 Rational[19, 32] Pi, 1.1483284028786505`}, {
+                 Rational[5, 8] Pi, 1.1086554390135441`}, {
+                 Rational[21, 32] Pi, 1.058305517218026}, {
+                 Rational[11, 16] Pi, 0.9977635347630542}, {
+                 Rational[23, 32] Pi, 0.9276125440352844}, {
+                 Rational[3, 4] Pi, 0.8485281374238569}, {
+                 Rational[25, 32] Pi, 0.7612719409963745}, {
+                 Rational[13, 16] Pi, 0.6666842796235226}, {
+                 Rational[27, 32] Pi, 0.5656760841911972}, {
+                 Rational[7, 8] Pi, 0.4592201188381077}, {
+                 Rational[29, 32] Pi, 0.3483416127053548}, {
+                 Rational[15, 16] Pi, 0.2341083864193539}, {
+                 Rational[31, 32] Pi, 0.11762056839547272`}, {Pi, 0.}, {
+                 Rational[33, 32] Pi, -0.11762056839547272`}, {
+                 Rational[17, 16] Pi, -0.2341083864193539}, {
+                 Rational[35, 32] Pi, -0.3483416127053548}, {
+                 Rational[9, 8] Pi, -0.4592201188381077}, {
+                 Rational[37, 32] Pi, -0.5656760841911972}, {
+                 Rational[19, 16] Pi, -0.6666842796235226}, {
+                 Rational[39, 32] Pi, -0.7612719409963745}, {
+                 Rational[5, 4] Pi, -0.8485281374238569}, {
+                 Rational[41, 32] Pi, -0.9276125440352844}, {
+                 Rational[21, 16] Pi, -0.9977635347630542}, {
+                 Rational[43, 32] Pi, -1.058305517218026}, {
+                 Rational[11, 8] Pi, -1.1086554390135441`}, {
+                 Rational[45, 32] Pi, -1.1483284028786505`}, {
+                 Rational[23, 16] Pi, -1.1769423364838765`}, {
+                 Rational[47, 32] Pi, -1.1942216720066363`}, {
+                 Rational[3, 2] Pi, -1.2}, {
+                 Rational[49, 32] Pi, -1.1942216720066363`}, {
+                 Rational[25, 16] Pi, -1.1769423364838765`}, {
+                 Rational[51, 32] Pi, -1.1483284028786505`}, {
+                 Rational[13, 8] Pi, -1.1086554390135441`}, {
+                 Rational[53, 32] Pi, -1.058305517218026}, {
+                 Rational[27, 16] Pi, -0.9977635347630542}, {
+                 Rational[55, 32] Pi, -0.9276125440352844}, {
+                 Rational[7, 4] Pi, -0.8485281374238569}, {
+                 Rational[57, 32] Pi, -0.7612719409963745}, {
+                 Rational[29, 16] Pi, -0.6666842796235226}, {
+                 Rational[59, 32] Pi, -0.5656760841911972}, {
+                 Rational[15, 8] Pi, -0.4592201188381077}, {
+                 Rational[61, 32] Pi, -0.3483416127053548}, {
+                 Rational[31, 16] Pi, -0.2341083864193539}, {
+                 Rational[63, 32] Pi, -0.11762056839547272`}}, CompressedData["
+1:eJxTTMoPSmViYGCwA2IQLaHrEvJb8aR90a+N1c7fz9pfUjSur7l5yZ7t08x5
+Vt7X7CHyN+2dT7OcuJN81z7OIlSzKuu+fVeC+W4WqUdQ9Y/sP2wwd60KfWpf
+unz3y91/n9qfVbb7GRbzAqr/pX2fyP8qFfXX9rs3ndln5fbGvnFrfQPD+rdQ
+897bT4i+d2rt2/f2DPffnYxx/2ifxS115OK7D1DzP9l/bw+s4d370X5JSrnJ
+nOwv9v4vymb1xn+C2vfVnnne8ZqDVz7Zu736P+92/3d7LzFx/Q7pz1D7f9ob
+g8Fn+1f5HZzSW37B5SHu+QPX3/NVoCTqxl+4+RD3/YfbP2Ovz3ufOgYHmPsg
+7mV0gLk/k2HikhwBJgeY/yDuZ3KA+d/a+WpkzyJmB1j4QPzD4gALP542Sf41
+JqwOsPCF+I/VARb+907EHjl9jM0BFj8Q/7I7wOJvPfeiytcRHA7nCmesS5TZ
+B/U/pwMDFDT6PdPjfs0Jk98PCQ8umP79QRO1nmjVcsPM3w8JHx6Y/ftVruTN
+9OLnhblvPyS8eGHu3/9VbLNf1kI+mP/2Q8KPH+b//Y/X/GY8KikAC5/9kPAU
+gIXffp9zc+9ceSQAC9/9kPAVdICG//6t7+23P1kt6ACNn/2Q8BZygMbffjnB
+RxO/lAg5QON3PyT8hRyg8b+/zaglh8VOGC4PiQ9huP73wWruIuwicPMh8SMC
+tz+i9ISiygURuPsg8SUKd//BaVl/jGeKwv0HiT9RuP81d/Bcd04Sg4cPJD7F
+4OE36ea6jcHa4vDwhcSvODz8f/8K6En+Ig6PH0h8S8DjL0Xmc1rxXgl4/AIA
+jNzkWA==
+                "]]], 
+              Thickness[0.04], {
+               LineBox[
+                
+                NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                  Rational[1, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.19634954084936207`, 0.2341083864193539}, {
+                 0.19634954084936207`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[5, 16] Pi, 0.9977635347630542}, {
+                  Rational[5, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.9817477042468103, 0.9977635347630542}, {0.9817477042468103,
+                  0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[9, 16] Pi, 1.1769423364838765`}, {
+                  Rational[9, 16] Pi, Rational[1, 16] Pi}}, {{
+                 1.7671458676442586`, 1.1769423364838765`}, {
+                 1.7671458676442586`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[13, 16] Pi, 0.6666842796235226}, {
+                  Rational[13, 16] Pi, Rational[1, 16] Pi}}, {{
+                 2.552544031041707, 0.6666842796235226}, {2.552544031041707, 
+                 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[17, 16] Pi, -0.2341083864193539}, {
+                  Rational[17, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 3.3379421944391554`, -0.2341083864193539}, {
+                 3.3379421944391554`, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[21, 16] Pi, -0.9977635347630542}, {
+                  Rational[21, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.123340357836604, -0.9977635347630542}, {
+                 4.123340357836604, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[25, 16] Pi, -1.1769423364838765`}, {
+                  Rational[25, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.908738521234052, -1.1769423364838765`}, {
+                 4.908738521234052, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[29, 16] Pi, -0.6666842796235226}, {
+                  Rational[29, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 5.6941366846315, -0.6666842796235226}, {
+                 5.6941366846315, -0.19634954084936207`}}]]}, 
+              Opacity[0], 
+              RectangleBox[{0, -2.4}, 
+               
+               NCache[{Rational[63, 32] Pi, 2.4}, {6.1850105367549055`, 
+                2.4}]]}, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.25 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"RNA Sequence\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Content: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"GAGUAG\[Ellipsis]ACA\[NonBreakingSpace]\"", 
+                  "SummaryItem"], "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                  "\"(42 letters)\"", FontColor -> GrayLevel[0.5], 
+                   StripOnInput -> False], "SummaryItemAnnotation"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              CapForm["Round"], 
+              GrayLevel[0.35], 
+              Thickness[0.05], 
+              LineBox[
+               
+               NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                 Rational[3, 32] Pi, 0.3483416127053548}, {
+                 Rational[1, 8] Pi, 0.4592201188381077}, {
+                 Rational[5, 32] Pi, 0.5656760841911972}, {
+                 Rational[3, 16] Pi, 0.6666842796235226}, {
+                 Rational[7, 32] Pi, 0.7612719409963745}, {
+                 Rational[1, 4] Pi, 0.8485281374238569}, {
+                 Rational[9, 32] Pi, 0.9276125440352844}, {
+                 Rational[5, 16] Pi, 0.9977635347630542}, {
+                 Rational[11, 32] Pi, 1.058305517218026}, {
+                 Rational[3, 8] Pi, 1.1086554390135441`}, {
+                 Rational[13, 32] Pi, 1.1483284028786505`}, {
+                 Rational[7, 16] Pi, 1.1769423364838765`}, {
+                 Rational[15, 32] Pi, 1.1942216720066363`}, {
+                 Rational[1, 2] Pi, 1.2}, {
+                 Rational[17, 32] Pi, 1.1942216720066363`}, {
+                 Rational[9, 16] Pi, 1.1769423364838765`}, {
+                 Rational[19, 32] Pi, 1.1483284028786505`}, {
+                 Rational[5, 8] Pi, 1.1086554390135441`}, {
+                 Rational[21, 32] Pi, 1.058305517218026}, {
+                 Rational[11, 16] Pi, 0.9977635347630542}, {
+                 Rational[23, 32] Pi, 0.9276125440352844}, {
+                 Rational[3, 4] Pi, 0.8485281374238569}, {
+                 Rational[25, 32] Pi, 0.7612719409963745}, {
+                 Rational[13, 16] Pi, 0.6666842796235226}, {
+                 Rational[27, 32] Pi, 0.5656760841911972}, {
+                 Rational[7, 8] Pi, 0.4592201188381077}, {
+                 Rational[29, 32] Pi, 0.3483416127053548}, {
+                 Rational[15, 16] Pi, 0.2341083864193539}, {
+                 Rational[31, 32] Pi, 0.11762056839547272`}, {Pi, 0.}, {
+                 Rational[33, 32] Pi, -0.11762056839547272`}, {
+                 Rational[17, 16] Pi, -0.2341083864193539}, {
+                 Rational[35, 32] Pi, -0.3483416127053548}, {
+                 Rational[9, 8] Pi, -0.4592201188381077}, {
+                 Rational[37, 32] Pi, -0.5656760841911972}, {
+                 Rational[19, 16] Pi, -0.6666842796235226}, {
+                 Rational[39, 32] Pi, -0.7612719409963745}, {
+                 Rational[5, 4] Pi, -0.8485281374238569}, {
+                 Rational[41, 32] Pi, -0.9276125440352844}, {
+                 Rational[21, 16] Pi, -0.9977635347630542}, {
+                 Rational[43, 32] Pi, -1.058305517218026}, {
+                 Rational[11, 8] Pi, -1.1086554390135441`}, {
+                 Rational[45, 32] Pi, -1.1483284028786505`}, {
+                 Rational[23, 16] Pi, -1.1769423364838765`}, {
+                 Rational[47, 32] Pi, -1.1942216720066363`}, {
+                 Rational[3, 2] Pi, -1.2}, {
+                 Rational[49, 32] Pi, -1.1942216720066363`}, {
+                 Rational[25, 16] Pi, -1.1769423364838765`}, {
+                 Rational[51, 32] Pi, -1.1483284028786505`}, {
+                 Rational[13, 8] Pi, -1.1086554390135441`}, {
+                 Rational[53, 32] Pi, -1.058305517218026}, {
+                 Rational[27, 16] Pi, -0.9977635347630542}, {
+                 Rational[55, 32] Pi, -0.9276125440352844}, {
+                 Rational[7, 4] Pi, -0.8485281374238569}, {
+                 Rational[57, 32] Pi, -0.7612719409963745}, {
+                 Rational[29, 16] Pi, -0.6666842796235226}, {
+                 Rational[59, 32] Pi, -0.5656760841911972}, {
+                 Rational[15, 8] Pi, -0.4592201188381077}, {
+                 Rational[61, 32] Pi, -0.3483416127053548}, {
+                 Rational[31, 16] Pi, -0.2341083864193539}, {
+                 Rational[63, 32] Pi, -0.11762056839547272`}}, CompressedData["
+1:eJxTTMoPSmViYGCwA2IQLaHrEvJb8aR90a+N1c7fz9pfUjSur7l5yZ7t08x5
+Vt7X7CHyN+2dT7OcuJN81z7OIlSzKuu+fVeC+W4WqUdQ9Y/sP2wwd60KfWpf
+unz3y91/n9qfVbb7GRbzAqr/pX2fyP8qFfXX9rs3ndln5fbGvnFrfQPD+rdQ
+897bT4i+d2rt2/f2DPffnYxx/2ifxS115OK7D1DzP9l/bw+s4d370X5JSrnJ
+nOwv9v4vymb1xn+C2vfVnnne8ZqDVz7Zu736P+92/3d7LzFx/Q7pz1D7f9ob
+g8Fn+1f5HZzSW37B5SHu+QPX3/NVoCTqxl+4+RD3/YfbP2Ovz3ufOgYHmPsg
+7mV0gLk/k2HikhwBJgeY/yDuZ3KA+d/a+WpkzyJmB1j4QPzD4gALP542Sf41
+JqwOsPCF+I/VARb+907EHjl9jM0BFj8Q/7I7wOJvPfeiytcRHA7nCmesS5TZ
+B/U/pwMDFDT6PdPjfs0Jk98PCQ8umP79QRO1nmjVcsPM3w8JHx6Y/ftVruTN
+9OLnhblvPyS8eGHu3/9VbLNf1kI+mP/2Q8KPH+b//Y/X/GY8KikAC5/9kPAU
+gIXffp9zc+9ceSQAC9/9kPAVdICG//6t7+23P1kt6ACNn/2Q8BZygMbffjnB
+RxO/lAg5QON3PyT8hRyg8b+/zaglh8VOGC4PiQ9huP73wWruIuwicPMh8SMC
+tz+i9ISiygURuPsg8SUKd//BaVl/jGeKwv0HiT9RuP81d/Bcd04Sg4cPJD7F
+4OE36ea6jcHa4vDwhcSvODz8f/8K6En+Ig6PH0h8S8DjL0Xmc1rxXgl4/AIA
+jNzkWA==
+                "]]], 
+              Thickness[0.04], {
+               LineBox[
+                
+                NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                  Rational[1, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.19634954084936207`, 0.2341083864193539}, {
+                 0.19634954084936207`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[5, 16] Pi, 0.9977635347630542}, {
+                  Rational[5, 16] Pi, Rational[1, 16] Pi}}, {{
+                 0.9817477042468103, 0.9977635347630542}, {0.9817477042468103,
+                  0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[9, 16] Pi, 1.1769423364838765`}, {
+                  Rational[9, 16] Pi, Rational[1, 16] Pi}}, {{
+                 1.7671458676442586`, 1.1769423364838765`}, {
+                 1.7671458676442586`, 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[13, 16] Pi, 0.6666842796235226}, {
+                  Rational[13, 16] Pi, Rational[1, 16] Pi}}, {{
+                 2.552544031041707, 0.6666842796235226}, {2.552544031041707, 
+                 0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[17, 16] Pi, -0.2341083864193539}, {
+                  Rational[17, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 3.3379421944391554`, -0.2341083864193539}, {
+                 3.3379421944391554`, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[21, 16] Pi, -0.9977635347630542}, {
+                  Rational[21, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.123340357836604, -0.9977635347630542}, {
+                 4.123340357836604, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[25, 16] Pi, -1.1769423364838765`}, {
+                  Rational[25, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 4.908738521234052, -1.1769423364838765`}, {
+                 4.908738521234052, -0.19634954084936207`}}]], 
+               LineBox[
+                
+                NCache[{{Rational[29, 16] Pi, -0.6666842796235226}, {
+                  Rational[29, 16] Pi, Rational[-1, 16] Pi}}, {{
+                 5.6941366846315, -0.6666842796235226}, {
+                 5.6941366846315, -0.19634954084936207`}}]]}, 
+              Opacity[0], 
+              RectangleBox[{0, -2.4}, 
+               
+               NCache[{Rational[63, 32] Pi, 2.4}, {6.1850105367549055`, 
+                2.4}]]}, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.25 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"RNA Sequence\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Content: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"GAGUAGUGGAACCAGGCUAU\[Ellipsis]CAGACUAACA\
+\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\"", "SummaryItem"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  StyleBox[
+                  "\"(42 letters)\"", FontColor -> GrayLevel[0.5], 
+                   StripOnInput -> False], "SummaryItemAnnotation"]}]}, {
+               RowBox[{
+                 TagBox[
+                 "\"Higher-order Structure: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"12 bonds\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                 "\"Sequence composition: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"A (12), C (8), G (12), U (10)\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+    Bond[{7, 16}], 
+    Bond[{6, 17}], 
+    Bond[{5, 18}], 
+    Bond[{4, 19}], 
+    Bond[{3, 20}], 
+    Bond[{27, 31}], 
+    Bond[{26, 32}], 
+    Bond[{25, 33}], 
+    Bond[{24, 34}], 
+    Bond[{23, 35}], 
+    Bond[{22, 36}], 
+    Bond[{21, 37}]}],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.928545015052264*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"97572094-b6fb-4a12-86d4-a585113b8c8b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RNAFold", "[", 
+  RowBox[{"\"\<GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\>\"", ",", "All"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9285442919815063`*^9, 3.928544300657156*^9}, {
+  3.9285450117235403`*^9, 3.928545012075335*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"3c8e9484-4d27-425e-9057-c2ad5cca29e5"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"MinimumFreeEnergy\"\>", "\[Rule]", 
+    TemplateBox[{
+      RowBox[{"-", "8.800000190734863`"}], 
+      RowBox[{
+        SubscriptBox["\"kcal\"", "\"th\""], "\[InvisibleSpace]", "\"/\"", 
+        "\[InvisibleSpace]", "\"mol\""}], 
+      "thermochemical kilocalories per mole", 
+      FractionBox["\"ThermochemicalKilocalories\"", "\"Moles\""]},
+     "Quantity"]}], ",", 
+   RowBox[{"\<\"StructureString\"\>", 
+    "\[Rule]", "\<\"..(((((........)))))(((((((...))))))).....\"\>"}], ",", 
+   RowBox[{"\<\"BioSequence\"\>", "\[Rule]", 
+    InterpretationBox[
+     RowBox[{
+      TagBox["BioSequence",
+       "SummaryHead"], "[", 
+      DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+       "Ready"}, 
+       TemplateBox[{
+         PaneSelectorBox[{False -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SummaryBoxOpener"]], 
+                 ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                 None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                 "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GraphicsBox[{
+                 CapForm["Round"], 
+                 GrayLevel[0.35], 
+                 Thickness[0.05], 
+                 LineBox[
+                  
+                  NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                    Rational[3, 32] Pi, 0.3483416127053548}, {
+                    Rational[1, 8] Pi, 0.4592201188381077}, {
+                    Rational[5, 32] Pi, 0.5656760841911972}, {
+                    Rational[3, 16] Pi, 0.6666842796235226}, {
+                    Rational[7, 32] Pi, 0.7612719409963745}, {
+                    Rational[1, 4] Pi, 0.8485281374238569}, {
+                    Rational[9, 32] Pi, 0.9276125440352844}, {
+                    Rational[5, 16] Pi, 0.9977635347630542}, {
+                    Rational[11, 32] Pi, 1.058305517218026}, {
+                    Rational[3, 8] Pi, 1.1086554390135441`}, {
+                    Rational[13, 32] Pi, 1.1483284028786505`}, {
+                    Rational[7, 16] Pi, 1.1769423364838765`}, {
+                    Rational[15, 32] Pi, 1.1942216720066363`}, {
+                    Rational[1, 2] Pi, 1.2}, {
+                    Rational[17, 32] Pi, 1.1942216720066363`}, {
+                    Rational[9, 16] Pi, 1.1769423364838765`}, {
+                    Rational[19, 32] Pi, 1.1483284028786505`}, {
+                    Rational[5, 8] Pi, 1.1086554390135441`}, {
+                    Rational[21, 32] Pi, 1.058305517218026}, {
+                    Rational[11, 16] Pi, 0.9977635347630542}, {
+                    Rational[23, 32] Pi, 0.9276125440352844}, {
+                    Rational[3, 4] Pi, 0.8485281374238569}, {
+                    Rational[25, 32] Pi, 0.7612719409963745}, {
+                    Rational[13, 16] Pi, 0.6666842796235226}, {
+                    Rational[27, 32] Pi, 0.5656760841911972}, {
+                    Rational[7, 8] Pi, 0.4592201188381077}, {
+                    Rational[29, 32] Pi, 0.3483416127053548}, {
+                    Rational[15, 16] Pi, 0.2341083864193539}, {
+                    Rational[31, 32] Pi, 0.11762056839547272`}, {Pi, 0.}, {
+                    Rational[33, 32] Pi, -0.11762056839547272`}, {
+                    Rational[17, 16] Pi, -0.2341083864193539}, {
+                    Rational[35, 32] Pi, -0.3483416127053548}, {
+                    Rational[9, 8] Pi, -0.4592201188381077}, {
+                    Rational[37, 32] Pi, -0.5656760841911972}, {
+                    Rational[19, 16] Pi, -0.6666842796235226}, {
+                    Rational[39, 32] Pi, -0.7612719409963745}, {
+                    Rational[5, 4] Pi, -0.8485281374238569}, {
+                    Rational[41, 32] Pi, -0.9276125440352844}, {
+                    Rational[21, 16] Pi, -0.9977635347630542}, {
+                    Rational[43, 32] Pi, -1.058305517218026}, {
+                    Rational[11, 8] Pi, -1.1086554390135441`}, {
+                    Rational[45, 32] Pi, -1.1483284028786505`}, {
+                    Rational[23, 16] Pi, -1.1769423364838765`}, {
+                    Rational[47, 32] Pi, -1.1942216720066363`}, {
+                    Rational[3, 2] Pi, -1.2}, {
+                    Rational[49, 32] Pi, -1.1942216720066363`}, {
+                    Rational[25, 16] Pi, -1.1769423364838765`}, {
+                    Rational[51, 32] Pi, -1.1483284028786505`}, {
+                    Rational[13, 8] Pi, -1.1086554390135441`}, {
+                    Rational[53, 32] Pi, -1.058305517218026}, {
+                    Rational[27, 16] Pi, -0.9977635347630542}, {
+                    Rational[55, 32] Pi, -0.9276125440352844}, {
+                    Rational[7, 4] Pi, -0.8485281374238569}, {
+                    Rational[57, 32] Pi, -0.7612719409963745}, {
+                    Rational[29, 16] Pi, -0.6666842796235226}, {
+                    Rational[59, 32] Pi, -0.5656760841911972}, {
+                    Rational[15, 8] Pi, -0.4592201188381077}, {
+                    Rational[61, 32] Pi, -0.3483416127053548}, {
+                    Rational[31, 16] Pi, -0.2341083864193539}, {
+                    Rational[63, 32] 
+                    Pi, -0.11762056839547272`}}, CompressedData["
+1:eJxTTMoPSmViYGCwA2IQLaHrEvJb8aR90a+N1c7fz9pfUjSur7l5yZ7t08x5
+Vt7X7CHyN+2dT7OcuJN81z7OIlSzKuu+fVeC+W4WqUdQ9Y/sP2wwd60KfWpf
+unz3y91/n9qfVbb7GRbzAqr/pX2fyP8qFfXX9rs3ndln5fbGvnFrfQPD+rdQ
+897bT4i+d2rt2/f2DPffnYxx/2ifxS115OK7D1DzP9l/bw+s4d370X5JSrnJ
+nOwv9v4vymb1xn+C2vfVnnne8ZqDVz7Zu736P+92/3d7LzFx/Q7pz1D7f9ob
+g8Fn+1f5HZzSW37B5SHu+QPX3/NVoCTqxl+4+RD3/YfbP2Ovz3ufOgYHmPsg
+7mV0gLk/k2HikhwBJgeY/yDuZ3KA+d/a+WpkzyJmB1j4QPzD4gALP542Sf41
+JqwOsPCF+I/VARb+907EHjl9jM0BFj8Q/7I7wOJvPfeiytcRHA7nCmesS5TZ
+B/U/pwMDFDT6PdPjfs0Jk98PCQ8umP79QRO1nmjVcsPM3w8JHx6Y/ftVruTN
+9OLnhblvPyS8eGHu3/9VbLNf1kI+mP/2Q8KPH+b//Y/X/GY8KikAC5/9kPAU
+gIXffp9zc+9ceSQAC9/9kPAVdICG//6t7+23P1kt6ACNn/2Q8BZygMbffjnB
+RxO/lAg5QON3PyT8hRyg8b+/zaglh8VOGC4PiQ9huP73wWruIuwicPMh8SMC
+tz+i9ISiygURuPsg8SUKd//BaVl/jGeKwv0HiT9RuP81d/Bcd04Sg4cPJD7F
+4OE36ea6jcHa4vDwhcSvODz8f/8K6En+Ig6PH0h8S8DjL0Xmc1rxXgl4/AIA
+jNzkWA==
+                   "]]], 
+                 Thickness[0.04], {
+                  LineBox[
+                   
+                   NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                    Rational[1, 16] Pi, Rational[1, 16] Pi}}, {{
+                    0.19634954084936207`, 0.2341083864193539}, {
+                    0.19634954084936207`, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[5, 16] Pi, 0.9977635347630542}, {
+                    Rational[5, 16] Pi, Rational[1, 16] Pi}}, {{
+                    0.9817477042468103, 0.9977635347630542}, {
+                    0.9817477042468103, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[9, 16] Pi, 1.1769423364838765`}, {
+                    Rational[9, 16] Pi, Rational[1, 16] Pi}}, {{
+                    1.7671458676442586`, 1.1769423364838765`}, {
+                    1.7671458676442586`, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[13, 16] Pi, 0.6666842796235226}, {
+                    Rational[13, 16] Pi, Rational[1, 16] Pi}}, {{
+                    2.552544031041707, 0.6666842796235226}, {
+                    2.552544031041707, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[17, 16] Pi, -0.2341083864193539}, {
+                    Rational[17, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    3.3379421944391554`, -0.2341083864193539}, {
+                    3.3379421944391554`, -0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[21, 16] Pi, -0.9977635347630542}, {
+                    Rational[21, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    4.123340357836604, -0.9977635347630542}, {
+                    4.123340357836604, -0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[25, 16] Pi, -1.1769423364838765`}, {
+                    Rational[25, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    4.908738521234052, -1.1769423364838765`}, {
+                    4.908738521234052, -0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[29, 16] Pi, -0.6666842796235226}, {
+                    Rational[29, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    5.6941366846315, -0.6666842796235226}, {
+                    5.6941366846315, -0.19634954084936207`}}]]}, 
+                 Opacity[0], 
+                 RectangleBox[{0, -2.4}, 
+                  
+                  NCache[{Rational[63, 32] Pi, 2.4}, {6.1850105367549055`, 
+                   2.4}]]}, AspectRatio -> 1, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.25 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"RNA Sequence\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Content: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"GAGUAG\[Ellipsis]ACA\[NonBreakingSpace]\"", 
+                    "SummaryItem"], "\[InvisibleSpace]", 
+                    TagBox[
+                    StyleBox[
+                    "\"(42 letters)\"", FontColor -> GrayLevel[0.5], 
+                    StripOnInput -> False], "SummaryItemAnnotation"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}], True -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SummaryBoxCloser"]], 
+                 ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                 None, BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+                 "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GraphicsBox[{
+                 CapForm["Round"], 
+                 GrayLevel[0.35], 
+                 Thickness[0.05], 
+                 LineBox[
+                  
+                  NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                    Rational[3, 32] Pi, 0.3483416127053548}, {
+                    Rational[1, 8] Pi, 0.4592201188381077}, {
+                    Rational[5, 32] Pi, 0.5656760841911972}, {
+                    Rational[3, 16] Pi, 0.6666842796235226}, {
+                    Rational[7, 32] Pi, 0.7612719409963745}, {
+                    Rational[1, 4] Pi, 0.8485281374238569}, {
+                    Rational[9, 32] Pi, 0.9276125440352844}, {
+                    Rational[5, 16] Pi, 0.9977635347630542}, {
+                    Rational[11, 32] Pi, 1.058305517218026}, {
+                    Rational[3, 8] Pi, 1.1086554390135441`}, {
+                    Rational[13, 32] Pi, 1.1483284028786505`}, {
+                    Rational[7, 16] Pi, 1.1769423364838765`}, {
+                    Rational[15, 32] Pi, 1.1942216720066363`}, {
+                    Rational[1, 2] Pi, 1.2}, {
+                    Rational[17, 32] Pi, 1.1942216720066363`}, {
+                    Rational[9, 16] Pi, 1.1769423364838765`}, {
+                    Rational[19, 32] Pi, 1.1483284028786505`}, {
+                    Rational[5, 8] Pi, 1.1086554390135441`}, {
+                    Rational[21, 32] Pi, 1.058305517218026}, {
+                    Rational[11, 16] Pi, 0.9977635347630542}, {
+                    Rational[23, 32] Pi, 0.9276125440352844}, {
+                    Rational[3, 4] Pi, 0.8485281374238569}, {
+                    Rational[25, 32] Pi, 0.7612719409963745}, {
+                    Rational[13, 16] Pi, 0.6666842796235226}, {
+                    Rational[27, 32] Pi, 0.5656760841911972}, {
+                    Rational[7, 8] Pi, 0.4592201188381077}, {
+                    Rational[29, 32] Pi, 0.3483416127053548}, {
+                    Rational[15, 16] Pi, 0.2341083864193539}, {
+                    Rational[31, 32] Pi, 0.11762056839547272`}, {Pi, 0.}, {
+                    Rational[33, 32] Pi, -0.11762056839547272`}, {
+                    Rational[17, 16] Pi, -0.2341083864193539}, {
+                    Rational[35, 32] Pi, -0.3483416127053548}, {
+                    Rational[9, 8] Pi, -0.4592201188381077}, {
+                    Rational[37, 32] Pi, -0.5656760841911972}, {
+                    Rational[19, 16] Pi, -0.6666842796235226}, {
+                    Rational[39, 32] Pi, -0.7612719409963745}, {
+                    Rational[5, 4] Pi, -0.8485281374238569}, {
+                    Rational[41, 32] Pi, -0.9276125440352844}, {
+                    Rational[21, 16] Pi, -0.9977635347630542}, {
+                    Rational[43, 32] Pi, -1.058305517218026}, {
+                    Rational[11, 8] Pi, -1.1086554390135441`}, {
+                    Rational[45, 32] Pi, -1.1483284028786505`}, {
+                    Rational[23, 16] Pi, -1.1769423364838765`}, {
+                    Rational[47, 32] Pi, -1.1942216720066363`}, {
+                    Rational[3, 2] Pi, -1.2}, {
+                    Rational[49, 32] Pi, -1.1942216720066363`}, {
+                    Rational[25, 16] Pi, -1.1769423364838765`}, {
+                    Rational[51, 32] Pi, -1.1483284028786505`}, {
+                    Rational[13, 8] Pi, -1.1086554390135441`}, {
+                    Rational[53, 32] Pi, -1.058305517218026}, {
+                    Rational[27, 16] Pi, -0.9977635347630542}, {
+                    Rational[55, 32] Pi, -0.9276125440352844}, {
+                    Rational[7, 4] Pi, -0.8485281374238569}, {
+                    Rational[57, 32] Pi, -0.7612719409963745}, {
+                    Rational[29, 16] Pi, -0.6666842796235226}, {
+                    Rational[59, 32] Pi, -0.5656760841911972}, {
+                    Rational[15, 8] Pi, -0.4592201188381077}, {
+                    Rational[61, 32] Pi, -0.3483416127053548}, {
+                    Rational[31, 16] Pi, -0.2341083864193539}, {
+                    Rational[63, 32] 
+                    Pi, -0.11762056839547272`}}, CompressedData["
+1:eJxTTMoPSmViYGCwA2IQLaHrEvJb8aR90a+N1c7fz9pfUjSur7l5yZ7t08x5
+Vt7X7CHyN+2dT7OcuJN81z7OIlSzKuu+fVeC+W4WqUdQ9Y/sP2wwd60KfWpf
+unz3y91/n9qfVbb7GRbzAqr/pX2fyP8qFfXX9rs3ndln5fbGvnFrfQPD+rdQ
+897bT4i+d2rt2/f2DPffnYxx/2ifxS115OK7D1DzP9l/bw+s4d370X5JSrnJ
+nOwv9v4vymb1xn+C2vfVnnne8ZqDVz7Zu736P+92/3d7LzFx/Q7pz1D7f9ob
+g8Fn+1f5HZzSW37B5SHu+QPX3/NVoCTqxl+4+RD3/YfbP2Ovz3ufOgYHmPsg
+7mV0gLk/k2HikhwBJgeY/yDuZ3KA+d/a+WpkzyJmB1j4QPzD4gALP542Sf41
+JqwOsPCF+I/VARb+907EHjl9jM0BFj8Q/7I7wOJvPfeiytcRHA7nCmesS5TZ
+B/U/pwMDFDT6PdPjfs0Jk98PCQ8umP79QRO1nmjVcsPM3w8JHx6Y/ftVruTN
+9OLnhblvPyS8eGHu3/9VbLNf1kI+mP/2Q8KPH+b//Y/X/GY8KikAC5/9kPAU
+gIXffp9zc+9ceSQAC9/9kPAVdICG//6t7+23P1kt6ACNn/2Q8BZygMbffjnB
+RxO/lAg5QON3PyT8hRyg8b+/zaglh8VOGC4PiQ9huP73wWruIuwicPMh8SMC
+tz+i9ISiygURuPsg8SUKd//BaVl/jGeKwv0HiT9RuP81d/Bcd04Sg4cPJD7F
+4OE36ea6jcHa4vDwhcSvODz8f/8K6En+Ig6PH0h8S8DjL0Xmc1rxXgl4/AIA
+jNzkWA==
+                   "]]], 
+                 Thickness[0.04], {
+                  LineBox[
+                   
+                   NCache[{{Rational[1, 16] Pi, 0.2341083864193539}, {
+                    Rational[1, 16] Pi, Rational[1, 16] Pi}}, {{
+                    0.19634954084936207`, 0.2341083864193539}, {
+                    0.19634954084936207`, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[5, 16] Pi, 0.9977635347630542}, {
+                    Rational[5, 16] Pi, Rational[1, 16] Pi}}, {{
+                    0.9817477042468103, 0.9977635347630542}, {
+                    0.9817477042468103, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[9, 16] Pi, 1.1769423364838765`}, {
+                    Rational[9, 16] Pi, Rational[1, 16] Pi}}, {{
+                    1.7671458676442586`, 1.1769423364838765`}, {
+                    1.7671458676442586`, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[13, 16] Pi, 0.6666842796235226}, {
+                    Rational[13, 16] Pi, Rational[1, 16] Pi}}, {{
+                    2.552544031041707, 0.6666842796235226}, {
+                    2.552544031041707, 0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[17, 16] Pi, -0.2341083864193539}, {
+                    Rational[17, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    3.3379421944391554`, -0.2341083864193539}, {
+                    3.3379421944391554`, -0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[21, 16] Pi, -0.9977635347630542}, {
+                    Rational[21, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    4.123340357836604, -0.9977635347630542}, {
+                    4.123340357836604, -0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[25, 16] Pi, -1.1769423364838765`}, {
+                    Rational[25, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    4.908738521234052, -1.1769423364838765`}, {
+                    4.908738521234052, -0.19634954084936207`}}]], 
+                  LineBox[
+                   
+                   NCache[{{Rational[29, 16] Pi, -0.6666842796235226}, {
+                    Rational[29, 16] Pi, Rational[-1, 16] Pi}}, {{
+                    5.6941366846315, -0.6666842796235226}, {
+                    5.6941366846315, -0.19634954084936207`}}]]}, 
+                 Opacity[0], 
+                 RectangleBox[{0, -2.4}, 
+                  
+                  NCache[{Rational[63, 32] Pi, 2.4}, {6.1850105367549055`, 
+                   2.4}]]}, AspectRatio -> 1, ImageSize -> 
+                Dynamic[{
+                  Automatic, 
+                   3.25 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"RNA Sequence\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Content: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"GAGUAGUGGAACCAGGCUAU\[Ellipsis]CAGACUAACA\
+\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\"", "SummaryItem"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    StyleBox[
+                    "\"(42 letters)\"", FontColor -> GrayLevel[0.5], 
+                    StripOnInput -> False], "SummaryItemAnnotation"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    "\"Higher-order Structure: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"12 bonds\"", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox[
+                    "\"Sequence composition: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"A (12), C (8), G (12), U (10)\"", "SummaryItem"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+             AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}]}, 
+          Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+        "SummaryPanel"],
+       DynamicModuleValues:>{}], "]"}],
+     BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+       Bond[{7, 16}], 
+       Bond[{6, 17}], 
+       Bond[{5, 18}], 
+       Bond[{4, 19}], 
+       Bond[{3, 20}], 
+       Bond[{27, 31}], 
+       Bond[{26, 32}], 
+       Bond[{25, 33}], 
+       Bond[{24, 34}], 
+       Bond[{23, 35}], 
+       Bond[{22, 36}], 
+       Bond[{21, 37}]}],
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.928544292226802*^9, 3.92854430092117*^9}, {
+   3.92854451311665*^9, 3.928544542788274*^9}, 3.9285446147813787`*^9, 
+   3.928544671421665*^9, {3.928545010492653*^9, 3.928545025402063*^9}},
+ CellLabel->"Out[10]=",ExpressionUUID->"68902a68-1f23-45e6-b497-b99d523af632"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RNAFold", "[", 
+  RowBox[{"BioSequence", "[", 
+   RowBox[{
+   "\"\<DNA\>\"", ",", "\"\<GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\>\""}],
+    "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.928545018850367*^9, 3.928545019079455*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"3b22fc76-6ee9-4f04-af21-8dbc9a8f8aaa"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Failure",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[WarningSign]\"", 
+              Directive["Message", 35], StripOnInput -> False], 
+             ContentPadding -> False, FrameStyle -> None, 
+             FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+            GridBox[{{
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Message: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Invalid arguments passed to function \\!\\(\\*TagBox[\\\
+\"RNAFold\\\", Function[Short[Slot[1], 5]]]\\): \\!\\(\\*TagBox[RowBox[{\\\"{\
+\\\", RowBox[{RowBox[{\\\"BioSequence\\\", \\\"[\\\", RowBox[{\\\"\\\\\\\"DNA\
+\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\\\\\\\"\\\", \
+\\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\
+\\\"BioSequence\\\\\\\"\\\"}], \\\"}\\\"}], Function[Short[Slot[1], \
+5]]]\\).\"", "SummaryItem"]}}, 
+                 GridBoxItemSize -> {"Columns" -> {6.5, All, Automatic}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}, {
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Tag: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"InvalidArguments\"", "SummaryItem"]}}, 
+                 GridBoxItemSize -> {"Columns" -> {6.5, All, Automatic}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            FrameBox[
+             StyleBox["\"\[WarningSign]\"", 
+              Directive["Message", 35], StripOnInput -> False], 
+             ContentPadding -> False, FrameStyle -> None, 
+             FrameMargins -> {{0, 0}, {0, 0}}, StripOnInput -> False], 
+            GridBox[{{
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Message: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
+                   "\"Invalid arguments passed to function \\!\\(\\*TagBox[\\\
+\"RNAFold\\\", Function[Short[Slot[1], 5]]]\\): \\!\\(\\*TagBox[RowBox[{\\\"{\
+\\\", RowBox[{RowBox[{\\\"BioSequence\\\", \\\"[\\\", RowBox[{\\\"\\\\\\\"DNA\
+\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\\\\\\\"\\\", \
+\\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\"}]}], \\\"]\\\"}], \\\",\\\", \\\"\\\\\
+\\\"BioSequence\\\\\\\"\\\"}], \\\"}\\\"}], Function[Short[Slot[1], \
+5]]]\\).\"", "SummaryItem"]}}, 
+                 GridBoxItemSize -> {"Columns" -> {6.5, All, Automatic}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}, {
+               TagBox[
+                GridBox[{{
+                   TagBox["\"Tag: \"", "SummaryItemAnnotation"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["\"InvalidArguments\"", "SummaryItem"]}}, 
+                 GridBoxItemSize -> {"Columns" -> {6.5, All, Automatic}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 GridBoxSpacings -> {"Columns" -> {{0}}}], "SummaryItem"]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Arguments\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"BioSequence", "[", 
+                    
+                    RowBox[{
+                    "\"DNA\"", ",", 
+                    "\"GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA\"", ",", 
+                    RowBox[{"{", "}"}]}], "]"}], ",", "\"BioSequence\""}], 
+                    "}"}], HoldForm], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox[
+                  TemplateBox[{"\"Options\"", "\": \""}, "RowDefault"], 
+                  "SummaryItemAnnotation"], "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   RowBox[{"{", "}"}], HoldForm], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Failure[
+  "InvalidArguments", <|
+   "MessageTemplate" :> 
+    MessageName[ChristopherWolfram`ViennaRNALink`RNAFold, "invargs"], 
+    "MessageParameters" -> {ChristopherWolfram`ViennaRNALink`RNAFold, 
+      HoldForm[{
+        BioSequence["DNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {}], 
+        "BioSequence"}]}, "Arguments" :> {
+      BioSequence["DNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {}], 
+      "BioSequence"}, "Options" :> {}|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.9285450193698597`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"3e517db3-c76c-4f4c-b0c7-7948654c25d2"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 261}, {Automatic, 35}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ff817616-a148-41d4-9faf-dcb84a9e581d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 226, 3, 30, "Input",ExpressionUUID->"c9c1dc2e-0cee-44e6-b36c-f4f291fb7706"],
+Cell[CellGroupData[{
+Cell[809, 27, 149, 3, 67, "Section",ExpressionUUID->"efb21481-4623-40aa-9217-b062565b9f7f"],
+Cell[961, 32, 313, 6, 30, "Input",ExpressionUUID->"14db0846-12ae-4a8b-b53d-5e34227ed2ff"],
+Cell[1277, 40, 245, 4, 30, "Input",ExpressionUUID->"93b1d77f-80f1-4b05-8ba4-2999b9fac90c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1559, 49, 158, 3, 67, "Section",ExpressionUUID->"19b51f12-5475-450b-a06c-7abaf5c2c9e4"],
+Cell[CellGroupData[{
+Cell[1742, 56, 256, 4, 30, "Input",ExpressionUUID->"99435a7e-5fa2-4a9b-8af0-4169199a1fa4"],
+Cell[2001, 62, 20501, 401, 62, "Output",ExpressionUUID->"1139dc15-7d47-418d-8f43-a53c29bd6a09"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22539, 468, 267, 6, 30, "Input",ExpressionUUID->"d51fee54-a6b2-4899-96aa-12619a8a3b0a"],
+Cell[22809, 476, 20477, 401, 62, "Output",ExpressionUUID->"97572094-b6fb-4a12-86d4-a585113b8c8b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43323, 882, 335, 6, 30, "Input",ExpressionUUID->"3c8e9484-4d27-425e-9057-c2ad5cca29e5"],
+Cell[43661, 890, 22462, 423, 117, "Output",ExpressionUUID->"68902a68-1f23-45e6-b497-b99d523af632"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66160, 1318, 333, 7, 30, "Input",ExpressionUUID->"3b22fc76-6ee9-4f04-af21-8dbc9a8f8aaa"],
+Cell[66496, 1327, 7768, 156, 82, "Output",ExpressionUUID->"3e517db3-c76c-4f4c-b0c7-7948654c25d2"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

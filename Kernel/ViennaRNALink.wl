@@ -1,36 +1,13 @@
-(* ::Package:: *)
-
-(* ::Section:: *)
-(*Package Header*)
-
-
 BeginPackage["ChristopherWolfram`ViennaRNALink`"];
 
-
-(* ::Text:: *)
-(*Declare your public symbols here:*)
-
-
-SayHello;
-
+$LibViennaRNA
+RNAFold
 
 Begin["`Private`"];
 
-
-(* ::Section:: *)
-(*Definitions*)
-
-
-(* ::Text:: *)
-(*Define your public and private symbols here:*)
-
-
-SayHello[name_? StringQ] := "Hello " <> name <> "!";
-
-
-(* ::Section::Closed:: *)
-(*Package Footer*)
-
+Needs["ChristopherWolfram`ViennaRNALink`LibViennaRNA`"]
+Needs["ChristopherWolfram`ViennaRNALink`General`"]
+Needs["ChristopherWolfram`ViennaRNALink`RNAFold`"]
 
 End[];
 EndPackage[];

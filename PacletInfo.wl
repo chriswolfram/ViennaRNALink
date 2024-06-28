@@ -19,7 +19,8 @@ PacletObject[
         "Documentation",
         "Root" -> "Documentation",
         "Language" -> "English"
-      }
+      },
+      {"LibraryResources"}
     }
   |>
 ]
