@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     75978,       1525]
-NotebookOptionsPosition[     74292,       1487]
-NotebookOutlinePosition[     74690,       1503]
-CellTagsIndexPosition[     74647,       1500]
+NotebookDataLength[     96108,       1955]
+NotebookOptionsPosition[     94064,       1910]
+NotebookOutlinePosition[     94462,       1926]
+CellTagsIndexPosition[     94419,       1923]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,6 +43,429 @@ Cell[BoxData[
   "]"}]], "Input",
  CellChangeTimes->{{3.928501017751319*^9, 3.928501026127006*^9}},
  CellLabel->"In[2]:=",ExpressionUUID->"93b1d77f-80f1-4b05-8ba4-2999b9fac90c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Run tests", "Section",
+ CellChangeTimes->{{3.9285451425577717`*^9, 
+  3.928545145285097*^9}},ExpressionUUID->"f77d2cfa-1d10-46b3-b5ed-\
+bb3b0eb1bfeb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TestReport", "[", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{"\"\<*.wlt\>\"", ",", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ParentDirectory", "@", 
+        RowBox[{"NotebookDirectory", "[", "]"}]}], ",", "\"\<Tests\>\""}], 
+      "}"}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9285451614836407`*^9, 3.928545169493203*^9}, {
+  3.9285453871475153`*^9, 3.928545399432749*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"c8114d7b-9adc-4f4b-8257-6cf603b200a2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestReportObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"], 
+               ImageSizeCache -> {11., {0., 11.}}], Appearance -> None, 
+              BaseStyle -> {}, ButtonFunction :> (Typeset`open$$ = True), 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[
+             InsetBox[
+              PaneBox[
+               DynamicBox[
+                FEPrivate`FrontEndResource["MUnitExpressions", "SuccessIcon"],
+                 ImageSizeCache -> {16., {3., 9.}}], Alignment -> Center, 
+               ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}]]], AspectRatio -> 1, Axes -> False, 
+             Background -> GrayLevel[0.93], Frame -> True, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]], FrameTicks -> None, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], PlotRange -> {{0, 1}, {0, 1}}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Test Report: RNAFold.wlt\"", "SummaryItem"]}], 
+               "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}]}}, AutoDelete -> False, 
+             BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {
+              "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+          False, BaselinePosition -> {1, 1}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], True -> 
+        GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"], 
+               ImageSizeCache -> {11., {0., 11.}}], Appearance -> None, 
+              BaseStyle -> {}, ButtonFunction :> (Typeset`open$$ = False), 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[
+             InsetBox[
+              PaneBox[
+               DynamicBox[
+                FEPrivate`FrontEndResource["MUnitExpressions", "SuccessIcon"],
+                 ImageSizeCache -> {16., {3., 9.}}], Alignment -> Center, 
+               ImageSize -> 
+               Dynamic[{
+                 Automatic, 
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}]]], AspectRatio -> 1, Axes -> False, 
+             Background -> GrayLevel[0.93], Frame -> True, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]], FrameTicks -> None, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], PlotRange -> {{0, 1}, {0, 1}}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Title: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Test Report: RNAFold.wlt\"", "SummaryItem"]}], 
+               "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Tests count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Success count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["7", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Time elapsed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "0.005391`3.037086289646373", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity"], "SummaryItem"]}], 
+               "\[SpanFromLeft]"}}, AutoDelete -> False, 
+             BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {
+              "Columns" -> {{2}}, "Rows" -> {{Automatic}}}]}}, AutoDelete -> 
+          False, BaselinePosition -> {1, 1}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TestReportObject[<|
+   "Title" -> "Test Report: RNAFold.wlt", "Aborted" -> False, 
+    "TestResults" -> <|
+     2100662291563555564 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998113084`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "12351071-a518-4fc6-b955-e726313f012a", "TestID" -> 
+         "ViennaRNA-RNAFold-1", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "d6adf9ce-ec20-41a7-ad83-1364770d560d", "Input" -> 
+         HoldForm[
+           ChristopherWolfram`ViennaRNALink`RNAFold[
+           "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA"]], "ExpectedOutput" -> 
+         HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.001157`3.2138483567837435, "CPUTimeUsed" -> 0.0011519999999993757`,
+          "MemoryUsed" -> 5072, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>], 3650296021652772129 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998115706`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "3ed601fa-85b8-4cef-a75e-998486fb8082", "TestID" -> 
+         "ViennaRNA-RNAFold-2", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "7496accf-d195-4106-9bc8-c6d8add66f0b", "Input" -> 
+         HoldForm[
+           ChristopherWolfram`ViennaRNALink`RNAFold[
+           "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", "BioSequence"]], 
+         "ExpectedOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.000915`3.1119360918984422, "CPUTimeUsed" -> 0.0009160000000001389, 
+         "MemoryUsed" -> 5488, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>], 5211914558089279931 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998117533`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "140b3185-3d61-4f67-bf22-11baeeec1f91", "TestID" -> 
+         "ViennaRNA-RNAFold-3", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "838bc0a7-e2cb-4ced-9d8c-282db5fb2769", "Input" -> 
+         HoldForm[
+           ChristopherWolfram`ViennaRNALink`RNAFold[
+            BioSequence[
+            "RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA"]]], 
+         "ExpectedOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.001127`3.2024389138781006, "CPUTimeUsed" -> 0.001126999999999434, 
+         "MemoryUsed" -> 4936, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>], 3731464176550455518 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998119326`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "35f1476f-5a21-42e7-b827-ac057f898396", "TestID" -> 
+         "ViennaRNA-RNAFold-4", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "43448974-8cf4-4510-bc5d-085e6216880c", "Input" -> 
+         HoldForm[
+           ChristopherWolfram`ViennaRNALink`RNAFold[
+            BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA"], 
+            "BioSequence"]], "ExpectedOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualOutput" -> HoldForm[
+           BioSequence["RNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", {
+             Bond[{7, 16}], 
+             Bond[{6, 17}], 
+             Bond[{5, 18}], 
+             Bond[{4, 19}], 
+             Bond[{3, 20}], 
+             Bond[{27, 31}], 
+             Bond[{26, 32}], 
+             Bond[{25, 33}], 
+             Bond[{24, 34}], 
+             Bond[{23, 35}], 
+             Bond[{22, 36}], 
+             Bond[{21, 37}]}]], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.001093`3.189135159781697, "CPUTimeUsed" -> 0.0010929999999991225`, 
+         "MemoryUsed" -> 4936, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>], 5543855625542164731 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998120923`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "4fbcccdb-3e2d-4bd1-96cd-2e3d3d4cb906", "TestID" -> 
+         "ViennaRNA-RNAFold-5", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "30bf69cc-c8d8-4cae-a0c0-04ac3c58d373", "Input" -> 
+         HoldForm[
+           ChristopherWolfram`ViennaRNALink`RNAFold[
+           "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", "StructureString"]], 
+         "ExpectedOutput" -> 
+         HoldForm["..(((((........)))))(((((((...)))))))....."], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm["..(((((........)))))(((((((...)))))))....."], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.000478`2.8299428944441125, "CPUTimeUsed" -> 0.0004679999999996909, 
+         "MemoryUsed" -> 3832, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>], 6246032932381913862 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998122396`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "e19fd5ce-56a1-4e5b-9f05-40fc62221a06", "TestID" -> 
+         "ViennaRNA-RNAFold-6", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "b8f13db9-9852-444c-89e2-bd2fde030be9", "Input" -> 
+         HoldForm[
+           MatchQ[
+            ChristopherWolfram`ViennaRNALink`RNAFold[
+            "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA", 
+             "MinimumFreeEnergy"], 
+            Blank[Quantity]]], "ExpectedOutput" -> HoldForm[True], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.000466`2.818900914521994, "CPUTimeUsed" -> 0.0004670000000004393, 
+         "MemoryUsed" -> 12728, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>], 1945891181950491721 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 3.9285453998123865`*^9, 
+         "SameTest" -> SameQ, "SameMessages" -> Testing`MessageMatchQ, 
+         "MemoryConstraint" -> DirectedInfinity[1], "TimeConstraint" -> 
+         DirectedInfinity[1], "CreationID" -> 
+         "75384e76-39b1-40f9-8950-52b960716ef3", "TestID" -> 
+         "ViennaRNA-RNAFold-7", "TestFileName" -> 
+         "/Users/christopher/git/ViennaRNALink/Tests/RNAFold.wlt", 
+         "EvaluationID" -> "98e01fec-de95-4205-8211-6d7ca7de593f", "Input" -> 
+         HoldForm[
+           FailureQ[
+            ChristopherWolfram`ViennaRNALink`RNAFold[
+             BioSequence[
+             "DNA", "GAGUAGUGGAACCAGGCUAUGUUUGUGACUCGCAGACUAACA"]]]], 
+         "ExpectedOutput" -> HoldForm[True], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0.000155`2.340846696002285, "CPUTimeUsed" -> 0.00015600000000048908`,
+          "MemoryUsed" -> 3864, "IntermediateTestsTree" -> {}, "Outcome" -> 
+         "Success", "FailureType" -> None|>]|>, "FailureResults" -> <||>, 
+    "TestsNotEvaluatedKeys" -> {}, "TestsFailedWrongResultsKeys" -> {}, 
+    "TestsFailedWithMessagesKeys" -> {}, 
+    "TestsSucceededKeys" -> {2100662291563555564, 3650296021652772129, 
+     5211914558089279931, 3731464176550455518, 5543855625542164731, 
+     6246032932381913862, 1945891181950491721}|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.928545392043002*^9, 3.928545399828792*^9}},
+ CellLabel->"Out[15]=",ExpressionUUID->"7c80184f-ee99-4c2d-9b99-0b3f5290b31d"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1509,22 +1932,29 @@ Cell[961, 32, 313, 6, 30, "Input",ExpressionUUID->"14db0846-12ae-4a8b-b53d-5e342
 Cell[1277, 40, 245, 4, 30, "Input",ExpressionUUID->"93b1d77f-80f1-4b05-8ba4-2999b9fac90c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1559, 49, 158, 3, 67, "Section",ExpressionUUID->"19b51f12-5475-450b-a06c-7abaf5c2c9e4"],
+Cell[1559, 49, 156, 3, 67, "Section",ExpressionUUID->"f77d2cfa-1d10-46b3-b5ed-bb3b0eb1bfeb"],
 Cell[CellGroupData[{
-Cell[1742, 56, 256, 4, 30, "Input",ExpressionUUID->"99435a7e-5fa2-4a9b-8af0-4169199a1fa4"],
-Cell[2001, 62, 20501, 401, 62, "Output",ExpressionUUID->"1139dc15-7d47-418d-8f43-a53c29bd6a09"]
+Cell[1740, 56, 533, 12, 52, "Input",ExpressionUUID->"c8114d7b-9adc-4f4b-8257-6cf603b200a2"],
+Cell[2276, 70, 19006, 396, 61, "Output",ExpressionUUID->"7c80184f-ee99-4c2d-9b99-0b3f5290b31d"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22539, 468, 267, 6, 30, "Input",ExpressionUUID->"d51fee54-a6b2-4899-96aa-12619a8a3b0a"],
-Cell[22809, 476, 20477, 401, 62, "Output",ExpressionUUID->"97572094-b6fb-4a12-86d4-a585113b8c8b"]
+Cell[21331, 472, 158, 3, 67, "Section",ExpressionUUID->"19b51f12-5475-450b-a06c-7abaf5c2c9e4"],
+Cell[CellGroupData[{
+Cell[21514, 479, 256, 4, 30, "Input",ExpressionUUID->"99435a7e-5fa2-4a9b-8af0-4169199a1fa4"],
+Cell[21773, 485, 20501, 401, 62, "Output",ExpressionUUID->"1139dc15-7d47-418d-8f43-a53c29bd6a09"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43323, 882, 335, 6, 30, "Input",ExpressionUUID->"3c8e9484-4d27-425e-9057-c2ad5cca29e5"],
-Cell[43661, 890, 22462, 423, 117, "Output",ExpressionUUID->"68902a68-1f23-45e6-b497-b99d523af632"]
+Cell[42311, 891, 267, 6, 30, "Input",ExpressionUUID->"d51fee54-a6b2-4899-96aa-12619a8a3b0a"],
+Cell[42581, 899, 20477, 401, 62, "Output",ExpressionUUID->"97572094-b6fb-4a12-86d4-a585113b8c8b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[66160, 1318, 333, 7, 30, "Input",ExpressionUUID->"3b22fc76-6ee9-4f04-af21-8dbc9a8f8aaa"],
-Cell[66496, 1327, 7768, 156, 82, "Output",ExpressionUUID->"3e517db3-c76c-4f4c-b0c7-7948654c25d2"]
+Cell[63095, 1305, 335, 6, 30, "Input",ExpressionUUID->"3c8e9484-4d27-425e-9057-c2ad5cca29e5"],
+Cell[63433, 1313, 22462, 423, 117, "Output",ExpressionUUID->"68902a68-1f23-45e6-b497-b99d523af632"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[85932, 1741, 333, 7, 30, "Input",ExpressionUUID->"3b22fc76-6ee9-4f04-af21-8dbc9a8f8aaa"],
+Cell[86268, 1750, 7768, 156, 82, "Output",ExpressionUUID->"3e517db3-c76c-4f4c-b0c7-7948654c25d2"]
 }, Open  ]]
 }, Open  ]]
 }
