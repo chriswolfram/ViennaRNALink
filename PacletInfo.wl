@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Christopher Wolfram",
     "License" -> "MIT",
     "PublisherID" -> "ChristopherWolfram",
-    "Version" -> "1.0.1",
+    "Version" -> "1.0.2",
     "WolframVersion" -> "14+",
     "PrimaryContext" -> "ChristopherWolfram`ViennaRNALink`",
     "DocumentationURL" -> "https://resources.wolframcloud.com/PacletRepository/resources",
@@ -28,6 +28,6 @@ PacletObject[
       },
       {"LibraryResources"}
     },
-    "SystemID" -> {"Linux", "Linux-x86-64", "MacOSX-ARM64", "MacOSX-x86-64"}
+    "SystemID" -> {"Linux", "Linux-x86-64", "MacOSX-ARM64", "MacOSX-x86-64", "Windows-x86-64"}
   |>
 ]

@@ -9,6 +9,7 @@ $LibViennaRNA := $LibViennaRNA =
 		"Linux-x86-64",  "libRNA.so",
 		"MacOSX-x86-64", "libRNA.dylib",
 		"MacOSX-ARM64",  "libRNA.dylib",
+		"Windows-ARM64",  "libRNA.dll",
 		_, "libRNA"
 	]
 
