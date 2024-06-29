@@ -131,8 +131,8 @@ jobs:
         shell: msys2 {0}
         run: |
           echo "void dummy() {}" >> dummy.c
-          g++ dummy.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o libRNA.dll
-          ls
+          g++ dummy.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -Wl,-Bstatic -lws2_32 -lpthread -lmpfr -lgmp -o libRNA.dll
+          ldd libRNA.dll
 
       - uses: actions/upload-artifact@v4
         with:
