@@ -93,7 +93,7 @@ jobs:
         with:
           install: >-
             unzip
-            clang
+            gcc
             make
   
       - uses: robinraju/release-downloader@v1.10
@@ -111,6 +111,7 @@ jobs:
           cd ViennaRNA-2.6.4
           ls
           CFLAGS="-std=gnu11"
+          CXXFLAGS="-std=gnu11"
           ./configure --prefix="D:\a\ViennaRNALink\ViennaRNALink\build" --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --without-kinfold --enable-universal-binary=yes --disable-pthreads --disable-openmp LDFLAGS="-lwinmm"
   
       - name: Run make
@@ -118,6 +119,7 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           CFLAGS="-std=gnu11"
+          CXXFLAGS="-std=gnu11"
           make -C src/ViennaRNA
   
       - name: Run make install
