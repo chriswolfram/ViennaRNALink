@@ -125,6 +125,8 @@ jobs:
           cd ViennaRNA-2.6.4
           make -C src/ViennaRNA install
 
+      - run: ls ViennaRNA-2.6.4/build
+
 
   # final-assembly:
   #   name: Final paclet assembly
