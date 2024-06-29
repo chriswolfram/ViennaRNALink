@@ -8,82 +8,82 @@ on:
   workflow_dispatch:
 
 jobs:
-  # build-linux:
-  #   runs-on: ubuntu-latest
+  build-linux:
+    runs-on: ubuntu-latest
     
-  #   steps:
-  #     - uses: robinraju/release-downloader@v1.10
-  #       with:
-  #         repository: ViennaRNA/ViennaRNA
-  #         tag: v2.6.4
+    steps:
+      - uses: robinraju/release-downloader@v1.10
+        with:
+          repository: ViennaRNA/ViennaRNA
+          tag: v2.6.4
 
-  #     - name: Unpack ViennaRNA release
-  #       run: unzip -q ViennaRNA-2.6.4.zip
+      - name: Unpack ViennaRNA release
+        run: unzip -q ViennaRNA-2.6.4.zip
 
-  #     - name: Run configure
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         ./configure --prefix=/home/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+      - name: Run configure
+        run: |
+          cd ViennaRNA-2.6.4
+          ./configure --prefix=/home/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
 
-  #     - name: Run make
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         make
+      - name: Run make
+        run: |
+          cd ViennaRNA-2.6.4
+          make
 
-  #     - name: Run make install
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         make install
+      - name: Run make install
+        run: |
+          cd ViennaRNA-2.6.4
+          make install
 
-  #     - name: Build wrapper library
-  #       run: |
-  #         cd build/lib
-  #         echo "void dummy() {}" >> dummy.c
-  #         clang++ dummy.c --shared -Wl,--whole-archive,libRNA.a -Wl,--no-whole-archive -o libRNA.so
+      - name: Build wrapper library
+        run: |
+          cd build/lib
+          echo "void dummy() {}" >> dummy.c
+          clang++ dummy.c --shared -Wl,--whole-archive,libRNA.a -Wl,--no-whole-archive -o libRNA.so
 
-  #     - uses: actions/upload-artifact@v4
-  #       with:
-  #         name: linux-library
-  #         path: build/lib/libRNA.so
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-library
+          path: build/lib/libRNA.so
 
   
-  # build-macos:
-  #   runs-on: macos-latest
+  build-macos:
+    runs-on: macos-latest
     
-  #   steps:
-  #     - uses: robinraju/release-downloader@v1.10
-  #       with:
-  #         repository: ViennaRNA/ViennaRNA
-  #         tag: v2.6.4
+    steps:
+      - uses: robinraju/release-downloader@v1.10
+        with:
+          repository: ViennaRNA/ViennaRNA
+          tag: v2.6.4
 
-  #     - name: Unpack ViennaRNA release
-  #       run: unzip -q ViennaRNA-2.6.4.zip
+      - name: Unpack ViennaRNA release
+        run: unzip -q ViennaRNA-2.6.4.zip
 
-  #     - name: Run configure
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         ./configure --prefix=/Users/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
+      - name: Run configure
+        run: |
+          cd ViennaRNA-2.6.4
+          ./configure --prefix=/Users/runner/work/ViennaRNALink/ViennaRNALink/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --enable-universal-binary=yes
 
-  #     - name: Run make
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         make
+      - name: Run make
+        run: |
+          cd ViennaRNA-2.6.4
+          make
 
-  #     - name: Run make install
-  #       run: |
-  #         cd ViennaRNA-2.6.4
-  #         make install
+      - name: Run make install
+        run: |
+          cd ViennaRNA-2.6.4
+          make install
 
-  #     - name: Build wrapper library
-  #       run: |
-  #         cd build/lib
-  #         echo "void dummy() {}" >> dummy.c
-  #         clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.dylib
+      - name: Build wrapper library
+        run: |
+          cd build/lib
+          echo "void dummy() {}" >> dummy.c
+          clang++ dummy.c --shared -Wl,-force_load,libRNA.a -o libRNA.dylib
 
-  #     - uses: actions/upload-artifact@v4
-  #       with:
-  #         name: macos-library
-  #         path: build/lib/libRNA.dylib
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macos-library
+          path: build/lib/libRNA.dylib
 
 
   build-windows:
@@ -127,8 +127,6 @@ jobs:
           cd ViennaRNA-2.6.4
           make -C src/ViennaRNA install
 
-      - run: ls ViennaRNA-2.6.4/build
-
       - name: Build wrapper library
         shell: msys2 {0}
         run: |
@@ -142,50 +140,57 @@ jobs:
           path: libRNA.dll
 
 
-  # final-assembly:
-  #   name: Final paclet assembly
+  final-assembly:
+    name: Final paclet assembly
     
-  #   needs:
-  #   - build-linux
-  #   - build-macos
+    needs:
+    - build-linux
+    - build-macos
+    - build-windows
     
-  #   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
       
-  #   steps:
-  #   - uses: actions/checkout@v4
-  #     with:
-  #       path: ViennaRNALink
-  #       sparse-checkout: |
-  #         Kernel
-  #         Documentation
-  #         PacletInfo.wl
-  #         ResourceDefinition.nb
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        path: ViennaRNALink
+        sparse-checkout: |
+          Kernel
+          Documentation
+          PacletInfo.wl
+          ResourceDefinition.nb
     
-  #   - name: Download macOS builds
-  #     uses: actions/download-artifact@v4
-  #     with:
-  #       name: macos-library
-  #       path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
+    - name: Download macOS builds
+      uses: actions/download-artifact@v4
+      with:
+        name: macos-library
+        path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
 
-  #   # Unclear if this version of the library can actually work on x86 macs
-  #   - name: Download macOS x86 builds
-  #     uses: actions/download-artifact@v4
-  #     with:
-  #       name: macos-library
-  #       path: ViennaRNALink/LibraryResources/MacOSX-x86-64/
+    # Unclear if this version of the library can actually work on x86 macs
+    - name: Download macOS x86 builds
+      uses: actions/download-artifact@v4
+      with:
+        name: macos-library
+        path: ViennaRNALink/LibraryResources/MacOSX-x86-64/
         
-  #   - name: Download Linux builds
-  #     uses: actions/download-artifact@v4
-  #     with:
-  #       name: linux-library
-  #       path: ViennaRNALink/LibraryResources/Linux-x86-64/
+    - name: Download Linux builds
+      uses: actions/download-artifact@v4
+      with:
+        name: linux-library
+        path: ViennaRNALink/LibraryResources/Linux-x86-64/
+
+    - name: Download Windows builds
+      uses: actions/download-artifact@v4
+      with:
+        name: windows-library
+        path: ViennaRNALink/LibraryResources/Windows-x86-64/
     
-  #   - name: Upload final paclet
-  #     uses: actions/upload-artifact@v4
-  #     with:
-  #       name: ViennaRNALink
-  #       path: ViennaRNALink/
-  #       if-no-files-found: error
+    - name: Upload final paclet
+      uses: actions/upload-artifact@v4
+      with:
+        name: ViennaRNALink
+        path: ViennaRNALink/
+        if-no-files-found: error
 
 
   # Unclear if this is needed or whether the ARM version also works on older Intel macs.
