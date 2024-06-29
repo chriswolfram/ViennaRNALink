@@ -91,7 +91,9 @@ jobs:
     steps:
       - uses: msys2/setup-msys2@v2
         with:
-          install: unzip
+          install: >-
+            unzip
+            gcc
   
       - uses: robinraju/release-downloader@v1.10
         with:
