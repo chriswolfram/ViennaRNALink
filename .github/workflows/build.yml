@@ -127,6 +127,12 @@ jobs:
 
       - run: ls ViennaRNA-2.6.4/build
 
+      - name: Build wrapper library
+        run: |
+          echo "void dummy() {}" >> dummy.c
+          g++ dummy.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o libRNA.dll
+          ls
+
 
   # final-assembly:
   #   name: Final paclet assembly
