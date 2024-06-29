@@ -101,8 +101,6 @@ jobs:
           repository: ViennaRNA/ViennaRNA
           tag: v2.6.4
 
-      - run: gcc info
-
       - name: Unpack ViennaRNA release
         shell: msys2 {0}
         run: unzip -q ViennaRNA-2.6.4.zip
