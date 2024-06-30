@@ -131,7 +131,18 @@ jobs:
         shell: msys2 {0}
         run: |
           echo "void dummy() {}" >> dummy.c
+          
+          # Copy dependencies to build directory
+          cp /usr/bin/msys-mpfr-6.dll .
+          cp /usr/bin/msys-2.0.dll .
+          cp /usr/bin/msys-gcc_s-seh-1.dll .
+          cp /usr/bin/msys-stdc++-6.dll .
+          cp /usr/bin/msys-gmp-10.dll .
+
+          # Build the wrapper
           g++ dummy.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o libRNA.dll
+
+          # Check that the dependencies are included
           ldd libRNA.dll
 
       - uses: actions/upload-artifact@v4
