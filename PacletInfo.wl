@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Christopher Wolfram",
     "License" -> "MIT",
     "PublisherID" -> "ChristopherWolfram",
-    "Version" -> "1.0.2",
+    "Version" -> "1.0.3",
     "WolframVersion" -> "14+",
     "PrimaryContext" -> "ChristopherWolfram`ViennaRNALink`",
     "DocumentationURL" -> "https://resources.wolframcloud.com/PacletRepository/resources",
