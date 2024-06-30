@@ -98,65 +98,66 @@ jobs:
             mpfr-devel
             gmp-devel
   
-      - uses: robinraju/release-downloader@v1.10
-        with:
-          repository: ViennaRNA/ViennaRNA
-          tag: v2.6.4
+      # - uses: robinraju/release-downloader@v1.10
+      #   with:
+      #     repository: ViennaRNA/ViennaRNA
+      #     tag: v2.6.4
 
-      - name: Unpack ViennaRNA release
-        shell: msys2 {0}
-        run: unzip -q ViennaRNA-2.6.4.zip
+      # - name: Unpack ViennaRNA release
+      #   shell: msys2 {0}
+      #   run: unzip -q ViennaRNA-2.6.4.zip
   
-      - name: Run configure
-        shell: msys2 {0}
-        run: |
-          cd ViennaRNA-2.6.4
-          ls
-          mkdir build
-          ./configure CFLAGS="-std=gnu17" CXXFLAGS="-std=gnu++17" --prefix=$PWD/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --without-kinfold --enable-universal-binary=yes --disable-pthreads --disable-openmp LDFLAGS="-lwinmm"
+      # - name: Run configure
+      #   shell: msys2 {0}
+      #   run: |
+      #     cd ViennaRNA-2.6.4
+      #     ls
+      #     mkdir build
+      #     ./configure CFLAGS="-std=gnu17" CXXFLAGS="-std=gnu++17" --prefix=$PWD/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --without-kinfold --enable-universal-binary=yes --disable-pthreads --disable-openmp LDFLAGS="-lwinmm"
   
-      - name: Run make
-        shell: msys2 {0}
-        run: |
-          cd ViennaRNA-2.6.4
-          make -C src/ViennaRNA
+      # - name: Run make
+      #   shell: msys2 {0}
+      #   run: |
+      #     cd ViennaRNA-2.6.4
+      #     make -C src/ViennaRNA
   
-      - name: Run make install
-        shell: msys2 {0}
-        run: |
-          cd ViennaRNA-2.6.4
-          make -C src/ViennaRNA install
+      # - name: Run make install
+      #   shell: msys2 {0}
+      #   run: |
+      #     cd ViennaRNA-2.6.4
+      #     make -C src/ViennaRNA install
 
       - name: Build wrapper library
         shell: msys2 {0}
         run: |
-          echo "void dummy() {}" >> dummy.c
+          mkdir wrapper_build
           
           # Copy dependencies to build directory
-          cp /usr/bin/msys-mpfr-6.dll .
-          cp /usr/bin/msys-2.0.dll .
-          cp /usr/bin/msys-gcc_s-seh-1.dll .
-          cp /usr/bin/msys-stdc++-6.dll .
-          cp /usr/bin/msys-gmp-10.dll .
+          cp /usr/bin/msys-mpfr-6.dll wrapper_build
+          cp /usr/bin/msys-2.0.dll wrapper_build
+          cp /usr/bin/msys-gcc_s-seh-1.dll wrapper_build
+          cp /usr/bin/msys-stdc++-6.dll wrapper_build
+          cp /usr/bin/msys-gmp-10.dll wrapper_build
 
           # Build the wrapper
-          g++ dummy.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o libRNA.dll
+          echo "void dummy() {}" >> dummy.c
+          # g++ dummy.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o wrapper_build/libRNA.dll
 
           # Check that the dependencies are included
-          ldd libRNA.dll
+          # ldd wrapper_build/libRNA.dll
 
       - uses: actions/upload-artifact@v4
         with:
           name: windows-library
-          path: libRNA.dll
+          path: wrapper_build/
 
 
   final-assembly:
     name: Final paclet assembly
     
     needs:
-    - build-linux
-    - build-macos
+    # - build-linux
+    # - build-macos
     - build-windows
     
     runs-on: ubuntu-latest
@@ -171,30 +172,30 @@ jobs:
           PacletInfo.wl
           ResourceDefinition.nb
     
-    - name: Download macOS builds
-      uses: actions/download-artifact@v4
-      with:
-        name: macos-library
-        path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
+    # - name: Download macOS builds
+    #   uses: actions/download-artifact@v4
+    #   with:
+    #     name: macos-library
+    #     path: ViennaRNALink/LibraryResources/MacOSX-ARM64/
 
-    # Unclear if this version of the library can actually work on x86 macs
-    - name: Download macOS x86 builds
-      uses: actions/download-artifact@v4
-      with:
-        name: macos-library
-        path: ViennaRNALink/LibraryResources/MacOSX-x86-64/
+    # # Unclear if this version of the library can actually work on x86 macs
+    # - name: Download macOS x86 builds
+    #   uses: actions/download-artifact@v4
+    #   with:
+    #     name: macos-library
+    #     path: ViennaRNALink/LibraryResources/MacOSX-x86-64/
         
-    - name: Download Linux builds
-      uses: actions/download-artifact@v4
-      with:
-        name: linux-library
-        path: ViennaRNALink/LibraryResources/Linux-x86-64/
+    # - name: Download Linux builds
+    #   uses: actions/download-artifact@v4
+    #   with:
+    #     name: linux-library
+    #     path: ViennaRNALink/LibraryResources/Linux-x86-64/
 
     - name: Download Windows builds
       uses: actions/download-artifact@v4
       with:
         name: windows-library
-        path: ViennaRNALink/LibraryResources/Windows-x86-64/
+        path: ViennaRNALink/LibraryResources/Windows-x86-64
     
     - name: Upload final paclet
       uses: actions/upload-artifact@v4
