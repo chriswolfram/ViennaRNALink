@@ -1,0 +1,1962 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     90054,       1954]
+NotebookOptionsPosition[     84914,       1857]
+NotebookOutlinePosition[     85312,       1873]
+CellTagsIndexPosition[     85269,       1870]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"PacletInstall", "[", "\"\<ChristopherWolfram/ViennaRNALink\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9288453244113703`*^9, 3.92884533209074*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"eedca1e8-656f-4f09-86b4-12244f2a7d3d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["PacletObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Thickness[0.0416667], {
+               FaceForm[{
+                 RGBColor[0.961, 0.961, 0.961], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{12.5454, 
+                22.5972}, {7.5464, 20.5002}, {2.5454, 18.4022}, {2.5454, 
+                12.5982}, {2.5454, 12.5972}, {2.5454, 6.7952}, {7.5454, 
+                4.6962}, {7.546, 4.6972}, {12.5454, 2.5992}, {17.5454, 
+                4.6972}, {17.5454, 4.6962}, {22.5454, 6.7952}, {22.5454, 
+                12.5972}, {22.5454, 12.5982}, {22.5454, 18.4022}}}]}, {
+               FaceForm[{
+                 RGBColor[0.898, 0.898, 0.898], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{17.125, 8.3359}, {17.125, 
+                14.0569}, {16.875, 14.0569}, {16.875, 8.3359}, {17., 
+                8.1169}, {21.952, 6.0399}, {22.049, 6.2709}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{7.125, 8.3359}, {7.125, 14.0569}, {
+                6.875, 14.0569}, {6.875, 8.3359}, {1.952, 6.2709}, {2.048, 
+                6.0399}, {7., 8.1169}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{11.8745, 6.2383}, {6.9515, 4.1733}, {7.0475, 
+                3.9423}, {11.9995, 6.0193}, {16.9515, 3.9423}, {17.0475, 
+                4.1733}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{17.125, 14.1392}, {17.125, 
+                19.8602}, {16.875, 19.8602}, {16.875, 14.1392}, {17., 
+                13.9202}, {21.952, 11.8432}, {22.049, 12.0742}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{7.125, 14.1392}, {7.125, 19.8602}, {
+                6.875, 19.8602}, {6.875, 14.1392}, {1.952, 12.0742}, {2.048, 
+                11.8432}, {7., 13.9202}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{11.8746, 21.3633}, {11.8746, 18.3563}, {
+                11.9996, 18.3033}, {12.1246, 18.3563}, {12.1246, 21.3633}, {
+                11.9996, 21.4153}}}]}, {
+               FaceForm[{
+                 RGBColor[0.749, 0.749, 0.749], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 
+                 3}}}, {{{8.292, 19.8594}, {12., 21.4154}, {15.707, 
+                 19.8594}, {12., 18.3034}}, {{17.5, 19.5274}, {17.5, 
+                 20.1924}, {12., 22.5004}, {6.5, 20.1924}, {6.5, 19.5284}, {
+                 12., 17.2194}, {12., 17.2194}, {15.7, 18.7724}, {17.5, 
+                 19.5274}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{11.5, 8.5156}, {11.5, 6.4876}, {11.5, 
+                5.4026}, {12.5, 5.8226}, {12.5, 8.5156}, {12., 8.3056}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}}}, {{{21.5, 6.4873}, {17.5, 4.8083}, {17.5, 
+                 9.5283}, {21.5, 11.2073}}, {{21.5, 12.7113}, {21.5, 
+                 12.2913}, {17., 10.4033}, {16.5, 10.6133}, {16.5, 10.1943}, {
+                 15.707, 9.8613}, {16.5, 9.5283}, {16.5, 4.8083}, {16.5, 
+                 4.8093}, {16.5, 4.3903}, {15.707, 4.0573}, {17., 3.5143}, {
+                 22.5, 5.8223}, {22.5, 12.2913}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}}}, {{{6.5, 4.8086}, {2.5, 6.4876}, {2.5, 
+                 11.2066}, {6.5, 9.5286}}, {{7.5, 9.1096}, {7.5, 9.1096}, {
+                 7.5, 9.5286}, {8.292, 9.8616}, {7.5, 10.1936}, {7.5, 
+                 10.6136}, {7., 10.4036}, {2.5, 12.2906}, {2.5, 12.7106}, {
+                 1.5, 12.2916}, {1.5, 5.8226}, {7., 3.5146}, {8.293, 
+                 4.0576}, {7.5, 4.3906}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{3.2925, 17.7622}, {7.0005, 
+                 19.3182}, {10.7075, 17.7622}, {7.0005, 16.2062}}, {{6.5005, 
+                 10.6122}, {2.5005, 12.2912}, {2.5005, 17.0102}, {6.5005, 
+                 15.3322}}, {{7.5005, 10.1932}, {7.5005, 10.6122}, {7.5005, 
+                 15.3322}, {12.0005, 17.2202}, {12.5005, 17.0102}, {12.5005, 
+                 18.0952}, {7.0005, 20.4032}, {1.5005, 18.0952}, {1.5005, 
+                 11.6262}, {7.0005, 9.3182}, {8.2935, 9.8612}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{21.5, 12.291}, {17.5, 10.612}, {
+                 17.5, 15.332}, {21.5, 17.01}}, {{13.293, 17.762}, {17., 
+                 19.318}, {20.708, 17.762}, {17., 16.207}}, {{17., 20.403}, {
+                 11.5, 18.095}, {11.5, 17.01}, {12., 17.22}, {16.5, 15.332}, {
+                 16.5, 10.612}, {16.5, 10.194}, {15.706, 9.861}, {17., 
+                 9.318}, {22.5, 11.626}, {22.5, 18.095}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{16.4995, 4.3906}, {12.4995, 
+                 2.7116}, {12.4995, 7.4316}, {16.4995, 9.1096}}, {{11.4995, 
+                 2.7116}, {7.4995, 4.3906}, {7.4995, 9.1096}, {11.4995, 
+                 7.4316}}, {{16.4995, 10.6136}, {16.4995, 10.1946}, {11.9995, 
+                 8.3056}, {8.2915, 9.8616}, {7.4995, 10.1936}, {7.4995, 
+                 10.6146}, {6.4995, 10.1946}, {6.4995, 3.7256}, {11.9995, 
+                 1.4176}, {17.4995, 3.7256}, {17.4995, 10.1946}}}]}, {
+               FaceForm[{
+                 RGBColor[0.965, 0.765, 0.749], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{12., 17.6616}, {16.945, 15.5856}, {16.945, 
+                9.9376}, {12., 7.8636}, {7.055, 9.9376}, {7.055, 
+                15.5856}}}]}, {
+               FaceForm[{
+                 RGBColor[0.91, 0.655, 0.635], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{12.125, 
+                17.7627}, {11.875, 17.7627}, {11.875, 12.0407}, {6.952, 
+                9.9757}, {7.048, 9.7447}, {12., 11.8227}, {16.952, 9.7447}, {
+                17.048, 9.9757}, {12.125, 12.0407}}}]}, {
+               FaceForm[{
+                 RGBColor[0.867, 0.067, 0.], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                 0}}}, {{{12.5, 8.5146}, {12.5, 13.2336}, {16.5, 14.9116}, {
+                 16.5, 10.1926}}, {{7.5, 14.9116}, {11.5, 13.2336}, {11.5, 
+                 8.5146}, {7.5, 10.1926}}, {{15.708, 15.6636}, {12., 
+                 14.1086}, {8.292, 15.6636}, {12., 17.2206}}, {{12., 
+                 18.3046}, {6.5, 15.9956}, {6.5, 9.5286}, {12., 7.2206}, {
+                 17.5, 9.5286}, {17.5, 15.9956}}}]}}, AspectRatio -> 
+             Automatic, ImageSize -> {24., 24.}, 
+             PlotRange -> {{0., 24.}, {0., 24.}}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"ChristopherWolfram/ViennaRNALink\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"1.0.4\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              Thickness[0.0416667], {
+               FaceForm[{
+                 RGBColor[0.961, 0.961, 0.961], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{12.5454, 
+                22.5972}, {7.5464, 20.5002}, {2.5454, 18.4022}, {2.5454, 
+                12.5982}, {2.5454, 12.5972}, {2.5454, 6.7952}, {7.5454, 
+                4.6962}, {7.546, 4.6972}, {12.5454, 2.5992}, {17.5454, 
+                4.6972}, {17.5454, 4.6962}, {22.5454, 6.7952}, {22.5454, 
+                12.5972}, {22.5454, 12.5982}, {22.5454, 18.4022}}}]}, {
+               FaceForm[{
+                 RGBColor[0.898, 0.898, 0.898], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{17.125, 8.3359}, {17.125, 
+                14.0569}, {16.875, 14.0569}, {16.875, 8.3359}, {17., 
+                8.1169}, {21.952, 6.0399}, {22.049, 6.2709}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{7.125, 8.3359}, {7.125, 14.0569}, {
+                6.875, 14.0569}, {6.875, 8.3359}, {1.952, 6.2709}, {2.048, 
+                6.0399}, {7., 8.1169}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{11.8745, 6.2383}, {6.9515, 4.1733}, {7.0475, 
+                3.9423}, {11.9995, 6.0193}, {16.9515, 3.9423}, {17.0475, 
+                4.1733}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{17.125, 14.1392}, {17.125, 
+                19.8602}, {16.875, 19.8602}, {16.875, 14.1392}, {17., 
+                13.9202}, {21.952, 11.8432}, {22.049, 12.0742}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{7.125, 14.1392}, {7.125, 19.8602}, {
+                6.875, 19.8602}, {6.875, 14.1392}, {1.952, 12.0742}, {2.048, 
+                11.8432}, {7., 13.9202}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{11.8746, 21.3633}, {11.8746, 18.3563}, {
+                11.9996, 18.3033}, {12.1246, 18.3563}, {12.1246, 21.3633}, {
+                11.9996, 21.4153}}}]}, {
+               FaceForm[{
+                 RGBColor[0.749, 0.749, 0.749], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 
+                 3}}}, {{{8.292, 19.8594}, {12., 21.4154}, {15.707, 
+                 19.8594}, {12., 18.3034}}, {{17.5, 19.5274}, {17.5, 
+                 20.1924}, {12., 22.5004}, {6.5, 20.1924}, {6.5, 19.5284}, {
+                 12., 17.2194}, {12., 17.2194}, {15.7, 18.7724}, {17.5, 
+                 19.5274}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{11.5, 8.5156}, {11.5, 6.4876}, {11.5, 
+                5.4026}, {12.5, 5.8226}, {12.5, 8.5156}, {12., 8.3056}}}], 
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}}}, {{{21.5, 6.4873}, {17.5, 4.8083}, {17.5, 
+                 9.5283}, {21.5, 11.2073}}, {{21.5, 12.7113}, {21.5, 
+                 12.2913}, {17., 10.4033}, {16.5, 10.6133}, {16.5, 10.1943}, {
+                 15.707, 9.8613}, {16.5, 9.5283}, {16.5, 4.8083}, {16.5, 
+                 4.8093}, {16.5, 4.3903}, {15.707, 4.0573}, {17., 3.5143}, {
+                 22.5, 5.8223}, {22.5, 12.2913}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}}}, {{{6.5, 4.8086}, {2.5, 6.4876}, {2.5, 
+                 11.2066}, {6.5, 9.5286}}, {{7.5, 9.1096}, {7.5, 9.1096}, {
+                 7.5, 9.5286}, {8.292, 9.8616}, {7.5, 10.1936}, {7.5, 
+                 10.6136}, {7., 10.4036}, {2.5, 12.2906}, {2.5, 12.7106}, {
+                 1.5, 12.2916}, {1.5, 5.8226}, {7., 3.5146}, {8.293, 
+                 4.0576}, {7.5, 4.3906}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{3.2925, 17.7622}, {7.0005, 
+                 19.3182}, {10.7075, 17.7622}, {7.0005, 16.2062}}, {{6.5005, 
+                 10.6122}, {2.5005, 12.2912}, {2.5005, 17.0102}, {6.5005, 
+                 15.3322}}, {{7.5005, 10.1932}, {7.5005, 10.6122}, {7.5005, 
+                 15.3322}, {12.0005, 17.2202}, {12.5005, 17.0102}, {12.5005, 
+                 18.0952}, {7.0005, 20.4032}, {1.5005, 18.0952}, {1.5005, 
+                 11.6262}, {7.0005, 9.3182}, {8.2935, 9.8612}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{21.5, 12.291}, {17.5, 10.612}, {
+                 17.5, 15.332}, {21.5, 17.01}}, {{13.293, 17.762}, {17., 
+                 19.318}, {20.708, 17.762}, {17., 16.207}}, {{17., 20.403}, {
+                 11.5, 18.095}, {11.5, 17.01}, {12., 17.22}, {16.5, 15.332}, {
+                 16.5, 10.612}, {16.5, 10.194}, {15.706, 9.861}, {17., 
+                 9.318}, {22.5, 11.626}, {22.5, 18.095}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                 0, 1, 0}, {0, 1, 0}}}, {{{16.4995, 4.3906}, {12.4995, 
+                 2.7116}, {12.4995, 7.4316}, {16.4995, 9.1096}}, {{11.4995, 
+                 2.7116}, {7.4995, 4.3906}, {7.4995, 9.1096}, {11.4995, 
+                 7.4316}}, {{16.4995, 10.6136}, {16.4995, 10.1946}, {11.9995, 
+                 8.3056}, {8.2915, 9.8616}, {7.4995, 10.1936}, {7.4995, 
+                 10.6146}, {6.4995, 10.1946}, {6.4995, 3.7256}, {11.9995, 
+                 1.4176}, {17.4995, 3.7256}, {17.4995, 10.1946}}}]}, {
+               FaceForm[{
+                 RGBColor[0.965, 0.765, 0.749], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}}}, {{{12., 17.6616}, {16.945, 15.5856}, {16.945, 
+                9.9376}, {12., 7.8636}, {7.055, 9.9376}, {7.055, 
+                15.5856}}}]}, {
+               FaceForm[{
+                 RGBColor[0.91, 0.655, 0.635], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{12.125, 
+                17.7627}, {11.875, 17.7627}, {11.875, 12.0407}, {6.952, 
+                9.9757}, {7.048, 9.7447}, {12., 11.8227}, {16.952, 9.7447}, {
+                17.048, 9.9757}, {12.125, 12.0407}}}]}, {
+               FaceForm[{
+                 RGBColor[0.867, 0.067, 0.], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                 0}}}, {{{12.5, 8.5146}, {12.5, 13.2336}, {16.5, 14.9116}, {
+                 16.5, 10.1926}}, {{7.5, 14.9116}, {11.5, 13.2336}, {11.5, 
+                 8.5146}, {7.5, 10.1926}}, {{15.708, 15.6636}, {12., 
+                 14.1086}, {8.292, 15.6636}, {12., 17.2206}}, {{12., 
+                 18.3046}, {6.5, 15.9956}, {6.5, 9.5286}, {12., 7.2206}, {
+                 17.5, 9.5286}, {17.5, 15.9956}}}]}}, AspectRatio -> 
+             Automatic, ImageSize -> {24., 24.}, 
+             PlotRange -> {{0., 24.}, {0., 24.}}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"ChristopherWolfram/ViennaRNALink\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"1.0.4\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Location: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                  "\"Connecting ViennaRNA to the Wolfram Language for RNA \
+folding\"", Short], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  PacletObject[<|
+   "Name" -> "ChristopherWolfram/ViennaRNALink", "Description" -> 
+    "Connecting ViennaRNA to the Wolfram Language for RNA folding", "Creator" -> 
+    "Christopher Wolfram", "License" -> "MIT", "PublisherID" -> 
+    "ChristopherWolfram", "Version" -> "1.0.4", "WolframVersion" -> "14+", 
+    "PrimaryContext" -> "ChristopherWolfram`ViennaRNALink`", 
+    "DocumentationURL" -> 
+    "https://resources.wolframcloud.com/PacletRepository/resources", 
+    "Extensions" -> {{
+      "Kernel", "Root" -> "Kernel", 
+       "Context" -> {"ChristopherWolfram`ViennaRNALink`"}, 
+       "Symbols" -> {
+        "ChristopherWolfram`ViennaRNALink`$LibViennaRNA", 
+         "ChristopherWolfram`ViennaRNALink`RNAFold"}}, {
+      "Documentation", "Root" -> "Documentation", "Language" -> "English"}, {
+      "LibraryResources"}}, 
+    "SystemID" -> {
+     "Linux", "Linux-x86-64", "MacOSX-ARM64", "MacOSX-x86-64", 
+      "Windows-x86-64"}, "Location" -> 
+    "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4"|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.9288453376865873`*^9, 3.928846118360784*^9, 3.9288470976689653`*^9, 
+   3.928847194458107*^9, 3.928847466365324*^9, 3.92884852679338*^9, {
+   3.928848602542404*^9, 3.928848622386319*^9}, 3.928848856116695*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"ae87f1b1-3e99-416a-b60c-a52a5510d465"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<ChristopherWolfram`ViennaRNALink`\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.928845312532504*^9, 3.928845320813511*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"5d5b398a-5992-465c-91c8-9823ef389ebf"],
+
+Cell[CellGroupData[{
+
+Cell["Example", "Section",
+ CellChangeTimes->{{3.9288469311008167`*^9, 
+  3.9288469316995*^9}},ExpressionUUID->"831fb9d2-19c2-450e-b2d6-535055df824d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"seq1", "=", 
+   RowBox[{"StringJoin", "@", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<A\>\"", ",", "\"\<C\>\"", ",", "\"\<U\>\"", ",", "\"\<G\>\""}], 
+       "}"}], ",", "100"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"seq2", "=", 
+   RowBox[{"StringJoin", "@", 
+    RowBox[{"RandomChoice", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<A\>\"", ",", "\"\<C\>\"", ",", "\"\<U\>\"", ",", "\"\<G\>\""}], 
+       "}"}], ",", "100"}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9288469322978992`*^9, 3.928846958686967*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"a3fcefc3-7844-4708-865c-aae9d051c5ec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Base-pair distance", "Section",
+ CellChangeTimes->{{3.928846921838642*^9, 
+  3.928846924463241*^9}},ExpressionUUID->"809c4684-3589-44ee-a252-\
+fb6af52a0aee"],
+
+Cell["Load base pair distance function:", "Text",
+ CellChangeTimes->{{3.928846208374704*^9, 
+  3.928846215534671*^9}},ExpressionUUID->"7a8d0161-6e4f-46c1-bedc-\
+32870827178d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bpDistanceC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<vrna_bp_distance\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}],
+        ",", 
+       RowBox[{
+       "\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}]}], 
+      "}"}], "->", "\"\<CInt\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928846170636183*^9, 3.928846181282558*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"bad1356b-a010-45f2-8fa9-e30de7b5c4e6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_bp_distance\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}]}], "}"}], "\[Rule]", 
+                    "\"CInt\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_bp_distance\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}]}], "}"}], "\[Rule]", 
+                    "\"CInt\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "vrna_bp_distance", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5078146756], "Type" -> ({
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"], 
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"]} -> "CInt")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.928846179971816*^9, 3.9288461815206537`*^9}, 
+   3.9288469600974283`*^9, 3.928847101469098*^9, 3.928849711151572*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"a61307ba-f0cc-4f67-9867-356586845edd"]
+}, Open  ]],
+
+Cell["Call it on the secondary structure strings:", "Text",
+ CellChangeTimes->{{3.928846216942153*^9, 
+  3.928846222393368*^9}},ExpressionUUID->"c6d4e27b-3580-4b0e-9d20-\
+ab8a49a00da1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bpDistanceC", "[", 
+  RowBox[{
+   RowBox[{"RNAFold", "[", 
+    RowBox[{"seq1", ",", "\"\<StructureString\>\""}], "]"}], ",", 
+   RowBox[{"RNAFold", "[", 
+    RowBox[{"seq2", ",", "\"\<StructureString\>\""}], "]"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.928846183422353*^9, 3.928846191639269*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"6a8aa3a3-e155-48a4-97ae-01d079823753"],
+
+Cell[BoxData["55"], "Output",
+ CellChangeTimes->{{3.928846191928523*^9, 3.92884619423216*^9}, 
+   3.928846231382443*^9, {3.9288469608412437`*^9, 3.92884696133608*^9}, 
+   3.92884710254248*^9, 3.9288497120792513`*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"d00b459e-8af8-4fbe-9f9a-d34c3e2c483a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tree edit-distance (HIT)", "Section",
+ CellChangeTimes->{{3.9288474171841707`*^9, 
+  3.928847419976755*^9}},ExpressionUUID->"699fa3e6-bcab-40b5-bde3-\
+b9d0f20c4a91"],
+
+Cell["\<\
+Documentation: \
+https://gensoft.pasteur.fr/docs/ViennaRNA/2.4.14/treedist_8h.html#\
+a3b21f1925f7071f46d93431a835217bb\
+\>", "Text",
+ CellChangeTimes->{{3.928847747678102*^9, 
+  3.928847749424045*^9}},ExpressionUUID->"82fc3e06-b0f5-4256-80a3-\
+acfd0e28b693"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"makeTreeC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<make_tree\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}], 
+      "}"}], "->", "\"\<OpaqueRawPointer\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928847428963385*^9, 3.928847441908299*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"bd74361e-0b44-4299-9966-796d94137992"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"make_tree\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], "}"}], "\[Rule]", 
+                    "\"OpaqueRawPointer\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"make_tree\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], "}"}], "\[Rule]", 
+                    "\"OpaqueRawPointer\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "make_tree", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5078291776], "Type" -> ({
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"]} -> 
+      "OpaqueRawPointer")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.928847450230481*^9, 3.928847468608635*^9}, 
+   3.928848529143878*^9, {3.9288486048233356`*^9, 3.928848629657998*^9}, 
+   3.9288488655400047`*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"e0c6cf1a-2c6e-49f6-8c74-9618e1e956bb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"freeTreeC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<free_tree\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", "\"\<OpaqueRawPointer\>\"", "}"}], "->", "\"\<Void\>\""}]}],
+    "]"}]}]], "Input",
+ CellChangeTimes->{3.928847448300948*^9},
+ CellLabel->"In[6]:=",ExpressionUUID->"4a0a4c36-83e8-4014-9882-63c64918a34c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"free_tree\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", "\"OpaqueRawPointer\"", "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"free_tree\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", "\"OpaqueRawPointer\"", "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "free_tree", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5078293944], 
+     "Type" -> ({"OpaqueRawPointer"} -> "Void")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.928847449493853*^9, 3.928847491182317*^9, 3.92884852928979*^9, {
+   3.928848604968894*^9, 3.92884862980542*^9}, 3.928848865677816*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"36100572-767e-43b7-b282-217421329f57"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dbToTreeStringC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<vrna_db_to_tree_string\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}],
+        ",", "\"\<CUnsignedInt\>\""}], "}"}], "->", 
+     RowBox[{
+     "\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.928846972709293*^9, 3.9288470171190357`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"91b92aa5-0209-4729-9f73-0fc8003a7f20"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_db_to_tree_string\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], ",", 
+                    "\"CUnsignedInt\""}], "}"}], "\[Rule]", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}]}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_db_to_tree_string\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], ",", 
+                    "\"CUnsignedInt\""}], "}"}], "\[Rule]", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}]}], "SummaryItem"]}]}, {
+              
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "vrna_db_to_tree_string", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5078139184], "Type" -> ({
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"], "CUnsignedInt"} -> 
+      TypeSpecifier["RawPointer"]["UnsignedInteger8"])}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.928848529609877*^9, {3.928848605061469*^9, 3.9288486298175993`*^9}, 
+   3.92884886568862*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"409e83b9-440f-4171-81d3-dfe58912261a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"treeEditDistanceC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<tree_edit_distance\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<OpaqueRawPointer\>\"", ",", "\"\<OpaqueRawPointer\>\""}], 
+      "}"}], "->", "\"\<CFloat\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928847546745635*^9, 3.928847562024671*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"46d17b71-ca32-4a9a-a58b-c91dec2aa2cb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"tree_edit_distance\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"OpaqueRawPointer\"", ",", "\"OpaqueRawPointer\""}], 
+                    "}"}], "\[Rule]", "\"CFloat\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"tree_edit_distance\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"OpaqueRawPointer\"", ",", "\"OpaqueRawPointer\""}], 
+                    "}"}], "\[Rule]", "\"CFloat\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "tree_edit_distance", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5078286540], 
+     "Type" -> ({"OpaqueRawPointer", "OpaqueRawPointer"} -> "CFloat")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.9288474963470993`*^9, 3.928847562282721*^9, 3.928848530631805*^9, {
+   3.928848606398939*^9, 3.928848629822172*^9}, 3.9288488656946707`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"dba9c92f-a6e3-48b5-9673-efc6c54581d5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"stringFreeC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<vrna_string_free\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}], 
+      "}"}], "->", "\"\<Void\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928848475573645*^9, 3.9288485047919273`*^9}, {
+  3.928848664764784*^9, 3.928848665343026*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"aebb8dcc-e3a0-4065-91e3-431a63880d17"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_string_free\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_string_free\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "vrna_string_free", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5078130720], "Type" -> ({
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"]} -> "Void")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{{3.928848505099092*^9, 3.928848531887184*^9}, {
+   3.928848607335443*^9, 3.928848629834467*^9}, 3.928848665583056*^9, 
+   3.928848865705769*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"fb474365-d933-4344-b042-52dc5779d34f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["With memory leaks", "Subsection",
+ CellChangeTimes->{{3.928849723522356*^9, 
+  3.928849726556242*^9}},ExpressionUUID->"ec222b44-d732-4eec-8260-\
+b2f956a9edf3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tree1", "=", 
+   RowBox[{"CreateManagedObject", "[", 
+    RowBox[{
+     RowBox[{"makeTreeC", "[", 
+      RowBox[{"dbToTreeStringC", "[", 
+       RowBox[{
+        RowBox[{"RNAFold", "[", 
+         RowBox[{"seq1", ",", "\"\<StructureString\>\""}], "]"}], ",", "1"}], 
+       "]"}], "]"}], ",", "freeTreeC"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tree2", "=", 
+   RowBox[{"CreateManagedObject", "[", 
+    RowBox[{
+     RowBox[{"makeTreeC", "[", 
+      RowBox[{"dbToTreeStringC", "[", 
+       RowBox[{
+        RowBox[{"RNAFold", "[", 
+         RowBox[{"seq2", ",", "\"\<StructureString\>\""}], "]"}], ",", "1"}], 
+       "]"}], "]"}], ",", "freeTreeC"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.928847452592381*^9, 3.928847457365919*^9}, {
+  3.928847508031376*^9, 3.928847532888688*^9}, {3.928847982147505*^9, 
+  3.92884798549279*^9}, {3.928849739318755*^9, 3.9288497412429247`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"723beae9-be40-47d1-9435-cee7bbdaff0f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"treeEditDistanceC", "[", 
+  RowBox[{"tree1", ",", "tree2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.928847564151979*^9, 3.928847566868197*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"5b862a89-f3c3-4bd0-ac97-d0d87ce3235b"],
+
+Cell[BoxData["68.`"], "Output",
+ CellChangeTimes->{3.928849742634687*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"9c256ba2-cadc-4370-b8c9-9a63512d1ae0"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Without memory leaks", "Subsection",
+ CellChangeTimes->{{3.9288497276386747`*^9, 
+  3.928849729698907*^9}},ExpressionUUID->"7e18960b-c673-42d3-9a56-\
+8db717c483d4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"freeC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<free\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", "\"\<OpaqueRawPointer\>\"", "}"}], "->", "\"\<Void\>\""}]}],
+    "]"}]}]], "Input",
+ CellChangeTimes->{{3.9288479599837933`*^9, 3.9288479694945717`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"a508758c-5e19-46fd-8e13-603b5eee4f58"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"free\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", "\"OpaqueRawPointer\"", "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"free\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", "\"OpaqueRawPointer\"", "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "free", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[6553435328], 
+     "Type" -> ({"OpaqueRawPointer"} -> "Void")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{
+  3.9288479697749357`*^9, 3.9288485339572773`*^9, {3.9288486083523197`*^9, 
+   3.928848629839089*^9}, 3.9288497444642887`*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"c388a5e5-be6f-470c-8f01-6bcc96e6fe9a"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tree1", "=", 
+   RowBox[{"CreateManagedObject", "[", 
+    RowBox[{
+     RowBox[{"makeTreeC", "[", 
+      RowBox[{"CreateManagedObject", "[", 
+       RowBox[{
+        RowBox[{"dbToTreeStringC", "[", 
+         RowBox[{
+          RowBox[{"RNAFold", "[", 
+           RowBox[{"seq1", ",", "\"\<StructureString\>\""}], "]"}], ",", 
+          "1"}], "]"}], ",", "freeC"}], "]"}], "]"}], ",", "freeTreeC"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tree2", "=", 
+   RowBox[{"CreateManagedObject", "[", 
+    RowBox[{
+     RowBox[{"makeTreeC", "[", 
+      RowBox[{"CreateManagedObject", "[", 
+       RowBox[{
+        RowBox[{"dbToTreeStringC", "[", 
+         RowBox[{
+          RowBox[{"RNAFold", "[", 
+           RowBox[{"seq2", ",", "\"\<StructureString\>\""}], "]"}], ",", 
+          "1"}], "]"}], ",", "freeC"}], "]"}], "]"}], ",", "freeTreeC"}], 
+    "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.928847452592381*^9, 3.928847457365919*^9}, {
+  3.928847508031376*^9, 3.928847532888688*^9}, {3.928847982147505*^9, 
+  3.92884798549279*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"1d6280ee-3355-43d7-8053-d3400ce2d36c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"treeEditDistanceC", "[", 
+  RowBox[{"tree1", ",", "tree2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.928847564151979*^9, 3.928847566868197*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"f8619d4b-7faa-48df-bcdb-4b75c98e4ded"],
+
+Cell[BoxData["68.`"], "Output",
+ CellChangeTimes->{
+  3.928847567300589*^9, {3.92884798672582*^9, 3.928847988342955*^9}, 
+   3.928849746064024*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"4446b3c2-2f49-4111-bc15-e7c4a160acb1"]
+}, Open  ]],
+
+Cell["vrna_string_free", "Item",
+ CellChangeTimes->{{3.928848344982954*^9, 
+  3.928848347182081*^9}},ExpressionUUID->"09729bbc-3eb8-48f8-9d0f-\
+f5d5895c63c4"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tree edit-distance (HIT) OLD", "Section",
+ CellChangeTimes->{{3.9288469658535748`*^9, 3.928846970446767*^9}, {
+  3.928847415509803*^9, 
+  3.928847415962233*^9}},ExpressionUUID->"c39163cc-2a2b-43d9-9e51-\
+ea2d04ede12e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dbToTreeStringC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<vrna_db_to_tree_string\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}],
+        ",", "\"\<CUnsignedInt\>\""}], "}"}], "->", 
+     RowBox[{
+     "\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.928846972709293*^9, 3.9288470171190357`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"0a9d62a6-0b8d-493d-8951-00ba4448438b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_db_to_tree_string\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], ",", 
+                    "\"CUnsignedInt\""}], "}"}], "\[Rule]", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}]}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"vrna_db_to_tree_string\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], ",", 
+                    "\"CUnsignedInt\""}], "}"}], "\[Rule]", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}]}], "SummaryItem"]}]}, {
+              
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "vrna_db_to_tree_string", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5220811056], "Type" -> ({
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"], "CUnsignedInt"} -> 
+      TypeSpecifier["RawPointer"]["UnsignedInteger8"])}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.92884701742496*^9, 3.9288471040138893`*^9, 
+  3.928847195463481*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"2da432fe-5b01-49bd-abf9-445ede798570"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"freeTreeC", "=", 
+  RowBox[{"ForeignFunctionLoad", "[", 
+   RowBox[{"$LibViennaRNA", ",", "\"\<free_tree\>\"", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<RawPointer\>\"", "::[", "\"\<UnsignedInteger8\>\"", "]"}], 
+      "}"}], "->", "\"\<Void\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.928847162288086*^9, 3.9288471751979227`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"fc5dec05-8246-4d25-9424-19ed301f4eda"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ForeignFunction",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"free_tree\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"name: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"free_tree\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"type: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"TypeSpecifier", "[", "\"RawPointer\"", "]"}], 
+                    "[", "\"UnsignedInteger8\"", "]"}], "}"}], "\[Rule]", 
+                    "\"Void\""}], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"library: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ForeignFunction[
+  "/Users/christopher/Library/Mathematica/Paclets/Repository/\
+ChristopherWolfram__ViennaRNALink-1.0.4/LibraryResources/MacOSX-ARM64/libRNA.\
+dylib", "free_tree", 
+   DataStructure[
+   "RawForeignFunction", {
+    "FunctionPointer" -> OpaqueRawPointer[5117320632], "Type" -> ({
+        TypeSpecifier["RawPointer"]["UnsignedInteger8"]} -> "Void")}]],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.9288471754394827`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"8b7b2feb-15f1-4b21-8cb7-869b900b82e8"]
+}, Open  ]],
+
+Cell["TODO: MEMORY LEAK", "Text",
+ CellChangeTimes->{{3.928847115277693*^9, 
+  3.928847118218013*^9}},ExpressionUUID->"7da9fe95-9dc2-49cf-8191-\
+1d18ea0bf53c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RawMemoryImport", "[", 
+  RowBox[{
+   RowBox[{"dbToTreeStringC", "[", 
+    RowBox[{
+     RowBox[{"RNAFold", "[", 
+      RowBox[{"seq1", ",", "\"\<StructureString\>\""}], "]"}], ",", "1"}], 
+    "]"}], ",", "\"\<String\>\""}], "]"}]], "Input",
+ CellChangeTimes->{3.928847108818453*^9},
+ CellLabel->"In[6]:=",ExpressionUUID->"c1e365d9-22fb-4f68-9cac-c08ff82091fe"],
+
+Cell[BoxData["\<\"((U12)(((U2)((U8)((U2)((U4)P5)(U2)P4)((U6)P9)(U3)P2)(U2)P5)(\
+U1)P4)R)\"\>"], "Output",
+ CellChangeTimes->{{3.9288471092742434`*^9, 3.928847110184064*^9}, 
+   3.928847196852104*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"20d81f57-cab2-4355-bd62-09391ea7eff3"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"RawMemoryImport", "[", 
+  RowBox[{
+   RowBox[{"CreateManagedObject", "[", 
+    RowBox[{
+     RowBox[{"dbToTreeStringC", "[", 
+      RowBox[{
+       RowBox[{"RNAFold", "[", 
+        RowBox[{"seq1", ",", "\"\<StructureString\>\""}], "]"}], ",", "1"}], 
+      "]"}], ",", "freeTreeC"}], "]"}], ",", "\"\<String\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.928847181114156*^9, 3.92884718712041*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"b76341a9-6a9e-4c9d-bff9-5ef402606513"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 285}, {Automatic, 35}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3b8c4ddf-b2dc-4384-bd77-def09ee16ad9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 253, 4, 30, "Input",ExpressionUUID->"eedca1e8-656f-4f09-86b4-12244f2a7d3d"],
+Cell[836, 28, 23323, 412, 61, "Output",ExpressionUUID->"ae87f1b1-3e99-416a-b60c-a52a5510d465"]
+}, Open  ]],
+Cell[24174, 443, 245, 4, 30, "Input",ExpressionUUID->"5d5b398a-5992-465c-91c8-9823ef389ebf"],
+Cell[CellGroupData[{
+Cell[24444, 451, 150, 2, 67, "Section",ExpressionUUID->"831fb9d2-19c2-450e-b2d6-535055df824d"],
+Cell[24597, 455, 739, 20, 52, "Input",ExpressionUUID->"a3fcefc3-7844-4708-865c-aae9d051c5ec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25373, 480, 163, 3, 67, "Section",ExpressionUUID->"809c4684-3589-44ee-a252-fb6af52a0aee"],
+Cell[25539, 485, 175, 3, 35, "Text",ExpressionUUID->"7a8d0161-6e4f-46c1-bedc-32870827178d"],
+Cell[CellGroupData[{
+Cell[25739, 492, 582, 13, 52, "Input",ExpressionUUID->"bad1356b-a010-45f2-8fa9-e30de7b5c4e6"],
+Cell[26324, 507, 5671, 119, 92, "Output",ExpressionUUID->"a61307ba-f0cc-4f67-9867-356586845edd"]
+}, Open  ]],
+Cell[32010, 629, 185, 3, 35, "Text",ExpressionUUID->"c6d4e27b-3580-4b0e-9d20-ab8a49a00da1"],
+Cell[CellGroupData[{
+Cell[32220, 636, 404, 9, 30, "Input",ExpressionUUID->"6a8aa3a3-e155-48a4-97ae-01d079823753"],
+Cell[32627, 647, 295, 4, 34, "Output",ExpressionUUID->"d00b459e-8af8-4fbe-9f9a-d34c3e2c483a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32971, 657, 171, 3, 67, "Section",ExpressionUUID->"699fa3e6-bcab-40b5-bde3-b9d0f20c4a91"],
+Cell[33145, 662, 268, 7, 58, "Text",ExpressionUUID->"82fc3e06-b0f5-4256-80a3-acfd0e28b693"],
+Cell[CellGroupData[{
+Cell[33438, 673, 465, 9, 52, "Input",ExpressionUUID->"bd74361e-0b44-4299-9966-796d94137992"],
+Cell[33906, 684, 5266, 112, 61, "Output",ExpressionUUID->"e0c6cf1a-2c6e-49f6-8c74-9618e1e956bb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39209, 801, 375, 8, 30, "Input",ExpressionUUID->"4a0a4c36-83e8-4014-9882-63c64918a34c"],
+Cell[39587, 811, 4906, 105, 61, "Output",ExpressionUUID->"36100572-767e-43b7-b282-217421329f57"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44530, 921, 594, 13, 73, "Input",ExpressionUUID->"91b92aa5-0209-4729-9f73-0fc8003a7f20"],
+Cell[45127, 936, 5703, 121, 92, "Output",ExpressionUUID->"409e83b9-440f-4171-81d3-dfe58912261a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50867, 1062, 471, 9, 52, "Input",ExpressionUUID->"46d17b71-ca32-4a9a-a58b-c91dec2aa2cb"],
+Cell[51341, 1073, 5169, 111, 61, "Output",ExpressionUUID->"dba9c92f-a6e3-48b5-9673-efc6c54581d5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56547, 1189, 513, 10, 52, "Input",ExpressionUUID->"aebb8dcc-e3a0-4065-91e3-431a63880d17"],
+Cell[57063, 1201, 5240, 111, 61, "Output",ExpressionUUID->"fb474365-d933-4344-b042-52dc5779d34f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62340, 1317, 165, 3, 54, "Subsection",ExpressionUUID->"ec222b44-d732-4eec-8260-b2f956a9edf3"],
+Cell[62508, 1322, 1030, 25, 94, "Input",ExpressionUUID->"723beae9-be40-47d1-9435-cee7bbdaff0f"],
+Cell[CellGroupData[{
+Cell[63563, 1351, 246, 4, 30, "Input",ExpressionUUID->"5b862a89-f3c3-4bd0-ac97-d0d87ce3235b"],
+Cell[63812, 1357, 152, 2, 34, "Output",ExpressionUUID->"9c256ba2-cadc-4370-b8c9-9a63512d1ae0"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64013, 1365, 170, 3, 54, "Subsection",ExpressionUUID->"7e18960b-c673-42d3-9a56-8db717c483d4"],
+Cell[CellGroupData[{
+Cell[64208, 1372, 395, 8, 30, "Input",ExpressionUUID->"a508758c-5e19-46fd-8e13-603b5eee4f58"],
+Cell[64606, 1382, 4880, 105, 61, "Output",ExpressionUUID->"c388a5e5-be6f-470c-8f01-6bcc96e6fe9a"]
+}, Open  ]],
+Cell[69501, 1490, 1175, 30, 136, "Input",ExpressionUUID->"1d6280ee-3355-43d7-8053-d3400ce2d36c"],
+Cell[CellGroupData[{
+Cell[70701, 1524, 246, 4, 30, "Input",ExpressionUUID->"f8619d4b-7faa-48df-bcdb-4b75c98e4ded"],
+Cell[70950, 1530, 226, 4, 34, "Output",ExpressionUUID->"4446b3c2-2f49-4111-bc15-e7c4a160acb1"]
+}, Open  ]],
+Cell[71191, 1537, 158, 3, 32, "Item",ExpressionUUID->"09729bbc-3eb8-48f8-9d0f-f5d5895c63c4"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71398, 1546, 224, 4, 67, "Section",ExpressionUUID->"c39163cc-2a2b-43d9-9e51-ea2d04ede12e"],
+Cell[CellGroupData[{
+Cell[71647, 1554, 594, 13, 73, "Input",ExpressionUUID->"0a9d62a6-0b8d-493d-8951-00ba4448438b"],
+Cell[72244, 1569, 5675, 120, 92, "Output",ExpressionUUID->"2da432fe-5b01-49bd-abf9-445ede798570"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77956, 1694, 456, 9, 52, "Input",ExpressionUUID->"fc5dec05-8246-4d25-9424-19ed301f4eda"],
+Cell[78415, 1705, 5100, 109, 61, "Output",ExpressionUUID->"8b7b2feb-15f1-4b21-8cb7-869b900b82e8"]
+}, Open  ]],
+Cell[83530, 1817, 159, 3, 35, "Text",ExpressionUUID->"7da9fe95-9dc2-49cf-8191-1d18ea0bf53c"],
+Cell[CellGroupData[{
+Cell[83714, 1824, 386, 9, 30, "Input",ExpressionUUID->"c1e365d9-22fb-4f68-9cac-c08ff82091fe"],
+Cell[84103, 1835, 277, 4, 34, "Output",ExpressionUUID->"20d81f57-cab2-4355-bd62-09391ea7eff3"]
+}, Open  ]],
+Cell[84395, 1842, 503, 12, 52, "Input",ExpressionUUID->"b76341a9-6a9e-4c9d-bff9-5ef402606513"]
+}, Open  ]]
+}
+]
+*)
+
