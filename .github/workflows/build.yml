@@ -12,6 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Download wrapper library source
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            CSource
+        
       - uses: robinraju/release-downloader@v1.10
         with:
           repository: ViennaRNA/ViennaRNA
@@ -34,11 +40,6 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           make install
-
-      - name: Download wrapper library source
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: CSource
 
       - name: Build wrapper library
         run: |
@@ -58,6 +59,12 @@ jobs:
     runs-on: macos-latest
     
     steps:
+      - name: Download wrapper library source
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            CSource
+      
       - uses: robinraju/release-downloader@v1.10
         with:
           repository: ViennaRNA/ViennaRNA
@@ -80,11 +87,6 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           make install
-
-      - name: Download wrapper library source
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: CSource
 
       - name: Build wrapper library
         run: |
@@ -107,6 +109,12 @@ jobs:
             make
             mpfr-devel
             gmp-devel
+
+      - name: Download wrapper library source
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            CSource
   
       - uses: robinraju/release-downloader@v1.10
         with:
@@ -136,11 +144,6 @@ jobs:
         run: |
           cd ViennaRNA-2.6.4
           make -C src/ViennaRNA install
-
-      - name: Download wrapper library source
-        uses: actions/checkout@v4
-        with:
-          sparse-checkout: CSource
 
       - name: Build wrapper library
         shell: msys2 {0}
