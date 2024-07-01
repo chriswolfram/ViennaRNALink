@@ -47,7 +47,7 @@ jobs:
           echo "test"
           ls build
           
-          clang++ CSource/wrapper.c --shared -Wl,--whole-archive,$PWD/build/lib/libRNA.a -Wl,--no-whole-archive -o libRNA.so
+          clang++ CSource/wrapper.c --shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -o libRNA.so
 
       - uses: actions/upload-artifact@v4
         with:
@@ -90,7 +90,7 @@ jobs:
 
       - name: Build wrapper library
         run: |
-          clang++ CSource/wrapper.c --shared -Wl,-force_load,$PWD/build/lib/libRNA.a -o libRNA.dylib
+          clang++ CSource/wrapper.c --shared -Wl,-force_load,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -o libRNA.dylib
 
       - uses: actions/upload-artifact@v4
         with:
