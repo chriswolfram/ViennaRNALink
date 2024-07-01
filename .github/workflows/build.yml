@@ -43,10 +43,6 @@ jobs:
 
       - name: Build wrapper library
         run: |
-          ls
-          echo "test"
-          ls build
-          
           clang++ CSource/wrapper.c --shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -o libRNA.so
 
       - uses: actions/upload-artifact@v4
@@ -129,7 +125,6 @@ jobs:
         shell: msys2 {0}
         run: |
           cd ViennaRNA-2.6.4
-          ls
           mkdir build
           ./configure CFLAGS="-std=gnu17" CXXFLAGS="-std=gnu++17" --prefix=$PWD/build --without-perl --without-python --without-swig --without-doc-html --without-doc-pdf --without-doc --enable-shared=yes --enable-static=no --without-kinfold --enable-universal-binary=yes --disable-pthreads --disable-openmp LDFLAGS="-lwinmm"
   
