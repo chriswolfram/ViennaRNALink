@@ -44,7 +44,7 @@ jobs:
       - name: Build wrapper library
         run: |
           ls $PWD/ViennaRNA-2.6.4
-          clang++ CSource/wrapper.c --shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -o libRNA.so
+          clang++ CSource/wrapper.cpp --shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -o libRNA.so
 
       - uses: actions/upload-artifact@v4
         with:
@@ -87,7 +87,7 @@ jobs:
 
       - name: Build wrapper library
         run: |
-          clang++ CSource/wrapper.c --shared -Wl,-force_load,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -o libRNA.dylib
+          clang++ CSource/wrapper.cpp --shared -Wl,-force_load,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -o libRNA.dylib
 
       - uses: actions/upload-artifact@v4
         with:
@@ -154,7 +154,7 @@ jobs:
           cp /usr/bin/msys-gmp-10.dll wrapper_build
 
           # Build the wrapper
-          g++ CSource/wrapper.c -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o wrapper_build/libRNA.dll
+          g++ CSource/wrapper.cpp -shared -Wl,--whole-archive,$PWD/ViennaRNA-2.6.4/build/lib/libRNA.a -Wl,--no-whole-archive -lwinmm -lws2_32 -lpthread -lmpfr -lgmp -o wrapper_build/libRNA.dll
 
           # Check that the dependencies are included
           ldd wrapper_build/libRNA.dll
